@@ -18,12 +18,13 @@ Type
 2. [ ] FEATURE 
 3. [ ] DELETE
 
-3. Detail : (정확한 이슈 내용)
+3. Detail :
+
 
 ### TODO  
-1. [ ]  ex: 페이지만들기   
-2. [ ]  ex: 페이지만들기
-3. [ ]  ex: 페이지만들기
+1. [ ]     
+2. [ ]  
+3. [ ] 
 
 ### Estimated time
 1. [ ] 1H 
