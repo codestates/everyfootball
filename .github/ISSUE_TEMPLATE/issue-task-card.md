@@ -8,9 +8,13 @@ assignees: ''
 ---
 
 ### ISSUE
-- Group `client`, `server`, `sr`
-- Type: `bug`, `feature`, `delete`
-- Detail: fix actions from cluent redux
+1. Group 
+[ ] FE [ ] BE [ ] ALL
+
+2. Type
+[ ] BUG [ ] FEATURE [ ] DELETE
+
+3. Detail : 정확한 내용
 
 ### TODO
 1. [ ] Job1
@@ -18,11 +22,4 @@ assignees: ''
 3. [ ] Job3
 
 ### Estimated time
-> Pick one
-### `0.5h`
-### `1h`
-### `1.5h`
-### `2h`
-### `2.5h`
-### `3h`
-Duplicate of #
+[ ] 1H [ ] 1.5H [ ] 2H [ ] 2.5H [ ] 3H 
