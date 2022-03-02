@@ -8,9 +8,9 @@ import image from './futsal.jpg'
 export default function StadiumImage () {
 
   const imagestyle = {
-    height: "20vh",  //this is wrong
-          width: "30vw",
-              };
+    height: "15vh",
+    width: "30vw",
+  };
   
   return (
     <div>
