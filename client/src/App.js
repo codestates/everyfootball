@@ -6,6 +6,7 @@ import Signup from "./Components/Signup";
 import RecordBoard from "./Components/RecordBoardPage/RecordBoard";
 import MatchInfo from "./Components/MatchInfoPage/MatchInfo";
 import Login from "../src/Pages/Login";
+import Userinfo from "./Pages/Userinfo";
 
 function App() {
     return (
@@ -26,6 +27,9 @@ function App() {
                     </Route>
                     <Route path="/login">
                         <Login />
+                    </Route>
+                    <Route path="/userinfo">
+                        <Userinfo />
                     </Route>
                 </Switch>
             </div>
