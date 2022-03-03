@@ -19,7 +19,7 @@ const Match = ({date, location, gender, headCount}) => {
         </div>
         <div className="col">
           <button>
-            <Link to="/matchui">예약하기</Link>
+            <Link to="/matchinfo">예약하기</Link>
           </button>
         </div>
       </div>  

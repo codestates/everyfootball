@@ -1,44 +1,48 @@
 
 module.exports = (sequelize, DataTypes) => {
-    const matchs = sequelize.define("matchs",{
+    const playerinmatch = sequelize.define("playerinmatch",{
+    id: {
+        type : DataTypes.INTEGER,
+        allowNull: false,
+        primaryKey: true,
+        autoIncrement : true
+    },
+
+    userid: {
+        type : DataTypes.STRING,
+        allowNull: false,
+
+
+    },
     matchid: {
         type : DataTypes.STRING,
         allowNull: false,
-        primaryKey: true,
-
-    },
-
-    time: {
-        type : DataTypes.STRING,
-        allowNull: false,
 
 
     },
-    player: {
-        type : DataTypes.STRING,
-        allowNull: false,
-
-
-    },
-    location : {
+    goal : {
         type : DataTypes.STRING,
         allowNull: false,
     },
     
-    matchgender : {
+    shooting : {
         type : DataTypes.STRING,
-        allowNull: false,
+
     },
 
-    score : {
+    assist : {
         type : DataTypes.STRING,
-        allowNull: false,
+    
     },
 
-    createdAt: {
-        type: DataTypes.DATE
+    win: {
+        type: DataTypes.STRING
+    },   
+
+    end: {
+        type: DataTypes.STRING
     }   
 })
 
-return matchs;
+return playerinmatch;
 };

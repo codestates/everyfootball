@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import StadiumImage from './StadiumImage';
 import StadiumInfo from './StadiumInfo';
 import PlayerInfo from './PlayerInfo';
-import './Match.css' ;
+import './MatchInfo.css' ;
 // import { Link } from 'react-router-dom';
 // import axios from 'axios';
 
