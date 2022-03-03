@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 
 //axios.defaults.withCredentials = true;
 
-export default function Boardlist ({award, name,goal}) {
+export default function Ranklist ({award, name,goal}) {
   
   
   return (
