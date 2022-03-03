@@ -25,6 +25,7 @@ const Header = () => {
 
                 <ul id="main_menu">
                     <a href="/">Home</a>
+                    <Link to="userinfo">내 정보</Link>
                     <Link to="/recordboard">기록실</Link>
                     <a href="#">FAQ</a>
                 </ul>
