@@ -1,11 +1,38 @@
 import React, { useState } from 'react';
+import Boardlist from './Boardlist';
 // import { Link } from 'react-router-dom';
 // import axios from 'axios';
 
 //axios.defaults.withCredentials = true;
 
 export default function Board () {
+  const dummyData = [
+    {
+        rank : 1,
+        name : '김xx',
+        goal : 13,
+        assist : 3,
+        point : 16,
+        totalmatch: 4,
+    },
+    {
+        rank : 2,
+        name : '정xx',
+        goal : 7,
+        assist : 12,
+        point : 19,
+        totalmatch: 3,
+    },
+    {
+      rank : 3,
+      name : '진xx',
+      goal : 6,
+      assist : 5,
+      point : 10,
+      totalmatch: 3,
+    },
 
+]
 
   
   return (
@@ -24,30 +51,10 @@ export default function Board () {
                 </div>
             </div>
             <div class="tableBody">
-                <div class="tableRow">
-                    <div class="cell">1</div>
-                    <div class="cell">김xx</div>
-                    <div class="cell">13</div>
-                    <div class="cell">3</div>
-                    <div class="cell">16</div>
-                    <div class="cell">4</div>
-                </div>
-                <div class="tableRow">
-                    <div class="cell">2</div>
-                    <div class="cell">정xx</div>
-                    <div class="cell">7</div>
-                    <div class="cell">12</div>
-                    <div class="cell">19</div>
-                    <div class="cell">3</div>
-                </div>
-                <div class="tableRow">
-                    <div class="cell">3</div>
-                    <div class="cell">진xx</div>
-                    <div class="cell">6</div>
-                    <div class="cell">5</div>
-                    <div class="cell">10</div>
-                    <div class="cell">3</div>
-                </div>
+              {dummyData.map((el, i) => {
+                return <Boardlist key={i} rank={el.rank} name={el.name} goal={el.goal}
+                        assist={el.assist} point={el.point} totalmatch={el.totalmatch} />
+              })}
             </div>
         </div>
       </div>
