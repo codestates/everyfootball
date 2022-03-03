@@ -1,5 +1,6 @@
 import react from 'react'
 import './Match.css'
+import { Link } from 'react-router-dom'
 
 const Match = ({date, location, gender, headCount}) => {
     return (
@@ -18,7 +19,7 @@ const Match = ({date, location, gender, headCount}) => {
         </div>
         <div className="col">
           <button>
-            예약하기
+            <Link to="/matchui">예약하기</Link>
           </button>
         </div>
       </div>  

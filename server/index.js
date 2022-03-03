@@ -3,7 +3,7 @@ const cors = require("cors");
 const app = express();
 const usercontrollers = require("./controllers");
 const matchcontrorlers = require("./controllers");
-const port = 3000
+const port = 4000
 
 app.use(express.json());
 app.use(
@@ -22,6 +22,8 @@ app.post("/user/changeinfo", usercontrollers.changeinfo);
 app.post("/match/data", matchcontrorlers.data);
 app.get("/match/showmatchlist",matchcontrorlers.showmatchlist);
 app.get("/match/record",matchcontrorlers.record);
+
+app.post("/user/existedid", usercontrollers.existedid);
 
 app.listen(port, function (){
   console.log(`listen on ${port}`)

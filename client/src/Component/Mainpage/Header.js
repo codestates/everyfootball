@@ -18,15 +18,14 @@ const Header = () => {
                 </ul>
                :
                <ul id="top_menu">
-                <a href="/">로그인</a>
+                <a href="#">로그인</a>
                 <Link to="signup">회원가입</Link>
               </ul>}
               
               <ul id="main_menu">
-                <a href="#">Home</a>
-                <a href="#">출석부</a>
-                <a href="#">작품갤러리</a>
-                <a href="#">게시판</a>
+                <a href="/">Home</a>
+                <Link to="/recordboard">기록실</Link>
+                <a href="#">FAQ</a>
               </ul>
             </nav>
         </header>

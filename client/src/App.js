@@ -10,10 +10,10 @@ function App() {
     <BrowserRouter>
       <div className="App">
         <Switch>
-          <Route exact path="/"><Mainpage/></Route>
+          <Route exact path="/"><Mainpage /></Route>
           <Route path="/signup"><Signup/></Route>
-          <Route path="/recordBoard"><RecordBoard /></Route>
-          <Route path="/matchUI"><MatchInfo /></Route>
+          <Route path="/recordboard"><RecordBoard /></Route>
+          <Route path="/matchui"><MatchInfo /></Route>
         </Switch>
       </div>
     </BrowserRouter>
