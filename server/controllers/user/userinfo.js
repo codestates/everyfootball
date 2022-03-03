@@ -1,5 +1,30 @@
+const { users } = require('../../models');
+const jwt = require('jsonwebtoken');
+const { userinfo } = require('..');
+
 module.exports = (req, res) => {
     console.log('userinfo')
-    res.status(200).json({ "url" : "user/userinfo/get", "body" : req.body})
-}
+    
+    const logininfo = req.headers.authorization;
 
+
+    if (logininfo){
+        //요청 들러온 토큰 정리 
+        const token = logininfo.split(" ")[1]
+        
+        const data = jwt.verify(token, "1234", async(err,data)=>{
+
+            const userInfo = await users.findOne({
+                where: { 
+                    userid: data.userid
+                },
+            });
+
+        
+            res.status(200).json({data: {userInfo}})
+        })
+
+    }
+
+    
+} 

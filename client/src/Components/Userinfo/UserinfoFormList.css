@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Noto Sans KR", sans-serif;
+}
+
+#UserinfoFormList {
+    margin: 0 auto;
+    width: 500px;
+}
+.userinfo {
+    border-collapse: collapse;
+    border-top: 2px solid skyblue;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid black;
+    text-align: center;
+    table-layout: auto;
+    width: 100%;
+    table-layout: fixed;
+}
+.userinfo th,
+td {
+    text-align: left;
+    padding: 8px;
+    border: 1px solid #ddd;
+}
