@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import "./Header.css";
+import "../Mainpage/Header.css";
 const Header = () => {
     const [isLogin, setIsLogin] = useState(false);
     return (
@@ -19,15 +19,9 @@ const Header = () => {
                 ) : (
                     <ul id="top_menu">
                         <Link to="/login">로그인</Link>
-                        <Link to="/signup">회원가입</Link>
+                        <Link to="signup">회원가입</Link>
                     </ul>
                 )}
-
-                <ul id="main_menu">
-                    <a href="/">Home</a>
-                    <Link to="/recordboard">기록실</Link>
-                    <a href="#">FAQ</a>
-                </ul>
             </nav>
         </header>
     );
