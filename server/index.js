@@ -3,12 +3,14 @@ const cors = require("cors");
 const app = express();
 const usercontrollers = require("./controllers");
 const matchcontrorlers = require("./controllers");
-const port = 3000
+const port = 4000
+
+const db = require('./models')
 
 app.use(express.json());
 app.use(
   cors({
-    origin: ["http://localhost:3000"],
+    origin: ["http://localhost:4000"],
     credentials: true,
     methods: ["GET", "POST", "OPTIONS"],
   })
@@ -23,6 +25,8 @@ app.post("/match/data", matchcontrorlers.data);
 app.get("/match/showmatchlist",matchcontrorlers.showmatchlist);
 app.get("/match/record",matchcontrorlers.record);
 
-app.listen(port, function (){
-  console.log(`listen on ${port}`)
+db.sequelize.sync().then((req) => {
+  app.listen(port, function (){
+    console.log(`listen on ${port}`)  
+  });
 });

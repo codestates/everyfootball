@@ -19,7 +19,7 @@ const LoginForm = () => {
         // console.log("ID : ", inputId);
         // console.log("PW : ", inputPassword);
         axios
-            .post("/user/login", {
+            .post("https://localhost:3000/user/login", {
                 id: inputId,
                 password: inputPassword,
             })
