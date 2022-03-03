@@ -19,15 +19,14 @@ const Header = () => {
                 ) : (
                     <ul id="top_menu">
                         <Link to="/login">로그인</Link>
-                        <Link to="signup">회원가입</Link>
+                        <Link to="/signup">회원가입</Link>
                     </ul>
                 )}
 
                 <ul id="main_menu">
-                    <a href="#">Home</a>
-                    <a href="#">출석부</a>
-                    <a href="#">작품갤러리</a>
-                    <a href="#">게시판</a>
+                    <a href="/">Home</a>
+                    <Link to="/recordboard">기록실</Link>
+                    <a href="#">FAQ</a>
                 </ul>
             </nav>
         </header>

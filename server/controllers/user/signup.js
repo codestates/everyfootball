@@ -14,7 +14,7 @@ module.exports = (req, res) => {
         position : req.body.position
     }
 
-sequelize.sync().then((result)=> {
+    sequelize.sync().then((result)=> {
     return users.create({
         userid : req.body.userid,
         password : req.body.password,
@@ -22,18 +22,12 @@ sequelize.sync().then((result)=> {
         gender : req.body.gender,
         location : req.body.location,
         position : req.body.position})
-    }
-).catch((err)=> {
+    })
+    .catch((err)=> {
     console.log(err)
-})
+    })
 
-
-
-res.status(200).json({message : "work!", "payload" : payload})
-
-
-
-
+    res.status(200).json({message : "work!", "payload" : payload})
 
 }
 
