@@ -1,73 +1,58 @@
-import react from 'react'
-import './Footer.css'
+import react from "react";
+import "./Footer.css";
+import logo from "./logo.png";
 const Footer = () => {
     return (
-       <footer>
-           <div class="box">
-               <div class="items">
-                   <h3 class="sitemap_category">매치</h3>
-                   <ul>
-                       <li>모든 매치</li>
-                       <li>여성 매치</li>
-                       <li>혼성 매치</li>
-                       <li>남성 매치</li>
-                   </ul>
-               </div> {/* items */}
-               <div class="items">
-                   <h3 class="sitemap_category">서비스 지역</h3>
-                   <ul>
-                       <li>서울</li>
-                       <li>경기/강원</li>
-                       <li>인천</li>
-                       <li>대전/세종/충청</li>
-                       <li>대구/경북</li>
-                       <li>부산/울산/경남</li>
-                       <li>광주/전라</li>
-                       <li>제주</li>
-                   </ul>
-               </div> {/* items */}
-               <div class="items">
-                   <h3 class="sitemap_category">에브리데이풋볼</h3>
-                   <ul>
-                       <li>에브리데이풋볼 소개</li>
-                       <li>매니저 지원</li>
-                       <li>채용</li>
-                       <li>공지사항</li>
-                       <li>자주 묻는 질문</li>
-                       <li>1:1 문의</li>
-                   </ul>
-               </div> {/* items */}
-               <div class="items">
-                   <h3 class="sitemap_category">소셜 미디어</h3>
-                   <ul>
-                       <li>인스타그램</li>
-                       <li>페이스북</li>
-                       <li>페이스북 그룹</li>
-                   </ul>
-               </div> {/* items */}
-               <div class="items_companyinfo">
-                 <h3 class="sitemap_site">everydayfootball.com</h3>
-                 <li>축구하고 싶을땐 에브리데이풋볼</li>
-                 <br/>
-                   <span>
-                    <a href="#">이용 약관 | </a>
-                    <a href="#">개인정보 처리방침 | </a>
-                    <a href="#">사업자 정보 확인</a>
-                   </span>
-                 <br/>
-                   <span>에브리데이풋볼 | 서울특별시 마포구 잔다리로31 제우피스빌딩 2층 | contact@plabfootball.com | 02-123-1234</span>
-                   <br/>
-                   <span>주식회사 에브리데이풋볼 | 사업자번호 123-12-12345 | 대표 최의림 | 통신판매업
-                     <br/>
-                      신고 2022-서울마포-1234
-                   </span>
-                   <br/>
-                 <span class="copyright">
-                 Copyright <b>EVERYDAYFOOTBALL</b> ALL rights reserved
-                 </span>
-               </div> {/* items */}
-           </div> {/* box */}
-       </footer>
-    )
-}
+        <footer>
+            <div id="menu">
+                <div class="menu-left">
+                    <div>
+                        <span>에브리풋볼 소개</span>
+                    </div>
+                    <div>
+                        <span>소셜매치</span>
+                    </div>
+                    <div>
+                        <span>매니저 지원하기</span>
+                    </div>
+                    <div>
+                        <span>경기 기록실</span>
+                    </div>
+                    <div>
+                        <span>자주 묻는 질문</span>
+                    </div>
+                </div>
+                <div class="menu-right">
+                    <img src="https://pzfutball.com/public_images/sidebar/youtube.svg" />
+                    <img src="https://pzfutball.com/public_images/sidebar/insta.svg" />
+                    <img src="https://pzfutball.com/public_images/sidebar/openkakao.svg" />
+                </div>
+                <div class="menu-right"></div>
+            </div>
+            <div id="company">
+                <div class="company-left">
+                    <div>
+                        <a>개인정보처리방침</a>
+                        <a>이용약관</a>
+                        <a>이메일무단수집거부</a>
+                        <a>사이트맵</a>
+                    </div>
+                    <div id="companyinfo">
+                        에브리풋볼 | 사업자번호 : 123-12-12345 | 대표자 : 최의림 | 서울시 용산구 한강대로 372 센트레빌
+                        아스테리움
+                        <br />
+                        사업자번호 12-12345-1234 | Copyright @ 2017 EveryFootball Corporation, All rights reserved.
+                    </div>
+                </div>
+                <div class="company-right">
+                    <div></div>
+                    <div>
+                        <img src={logo} />
+                    </div>
+                    <div></div>
+                </div>
+            </div>
+        </footer>
+    );
+};
 export default Footer;
