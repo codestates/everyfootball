@@ -39,25 +39,21 @@ export default function Board () {
     <div>
        <div className='totalPlayer'>
           선수기록
-          <div class="table titleStyle">
-            <div class="titleHead">
-                <div class="tableRow">
-                <div class="title">순위</div>
-                <div class="title">선수</div>
-                <div class="title">득점</div>
-                <div class="title">도움</div>
-                <div class="title">공격 포인트</div>
-                <div class="title">경기 수</div>
-                </div>
+          <div className="table">
+            <div className="row-header">
+              <div className="col">순위</div>
+              <div className="col">선수</div>
+              <div className="col">득점</div>
+              <div className="col">도움</div>
+              <div className="col">공격 포인트</div>
+              <div className="col">경기 수</div>
             </div>
-            <div class="tableBody">
-              {dummyData.map((el, i) => {
-                return <Boardlist key={i} rank={el.rank} name={el.name} goal={el.goal}
-                        assist={el.assist} point={el.point} totalmatch={el.totalmatch} />
-              })}
-            </div>
+            {dummyData.map((el, i) => {
+              return <Boardlist key={i} rank={el.rank} name={el.name} goal={el.goal}
+                      assist={el.assist} point={el.point} totalmatch={el.totalmatch} />
+            })}
+          </div>             
         </div>
-      </div>
     </div>
   );
 }

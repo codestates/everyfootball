@@ -8,7 +8,7 @@ import image from './futsal.jpg'
 export default function StadiumImage () {
 
   const imagestyle = {
-    height: "15vh",
+    height: "30vh",
     width: "30vw",
   };
   
@@ -16,7 +16,7 @@ export default function StadiumImage () {
     <div>
         <div className='stadium'>
             구장 이미지 및 지도
-            <div className='info'>
+            <div className='info1'>
                 <img src={image} style={imagestyle} alt="futsal"></img>
             </div>
         </div>
