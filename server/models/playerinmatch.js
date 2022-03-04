@@ -36,11 +36,14 @@ module.exports = (sequelize, DataTypes) => {
     },
 
     win: {
-        type: DataTypes.STRING
+        type: DataTypes.BOOLEAN,
+
     },   
 
     end: {
-        type: DataTypes.STRING
+        type: DataTypes.BOOLEAN,
+        defaultValue: false,
+        allowNull: false
     }   
 })
 

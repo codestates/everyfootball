@@ -20,6 +20,7 @@ app.post("/user/login", usercontrollers.login);
 app.post("/user/signup", usercontrollers.signup);
 app.post("/user/signout", usercontrollers.signout);
 app.get("/user/userinfo", usercontrollers.userinfo);
+app.get("/user/existedid", usercontrollers.existedid);
 app.post("/user/changeinfo", usercontrollers.changeinfo);
 app.post("/match/data", matchcontrorlers.data);
 app.get("/match/showmatchlist",matchcontrorlers.showmatchlist);

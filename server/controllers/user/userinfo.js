@@ -9,7 +9,6 @@ module.exports = (req, res) => {
 
 
     if (logininfo){
-        //요청 들러온 토큰 정리 
         const token = logininfo.split(" ")[1]
         
         const data = jwt.verify(token, "1234", async(err,data)=>{
