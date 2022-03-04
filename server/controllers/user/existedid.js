@@ -3,18 +3,18 @@
 // 사용해야 서버쪽 작성이 가능한데 npm start 하면
 // 에러가 뜨는 상황
 
-// const { users } = require('../../models');
+const { users } = require('../../models');
 module.exports = async (req, res) => {
-    // const isExisted = await users.findOne({
-    //   where : { userid : req.body.id }
-    // })
+    const isExisted = await users.findOne({
+    where : { userid : req.body.id }
+    })
 		
-	// 	if(!isExisted){
-	// 		res.status(404).send({message : 'new'})
-	// 	}else{
-	// 		res.status(200).send({message : 'exist'})
-	// 	}
-    // console.log(req.body)
-    
+		if(!isExisted){
+			res.status(404).send({message : 'new'})
+		}else{
+			res.status(200).send({message : 'exist'})
+		}
+    console.log(req.body)
+
 }
 
