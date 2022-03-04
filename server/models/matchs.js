@@ -2,22 +2,19 @@
 module.exports = (sequelize, DataTypes) => {
     const matchs = sequelize.define("matchs",{
     matchid: {
-        type : DataTypes.STRING,
-        allowNull: false,
+        type : DataTypes.INTEGER,
+        autoIncrement: true,
         primaryKey: true,
-
     },
 
     time: {
         type : DataTypes.STRING,
         allowNull: false,
 
-
     },
     player: {
         type : DataTypes.STRING,
         allowNull: false,
-
 
     },
     location : {
@@ -32,12 +29,13 @@ module.exports = (sequelize, DataTypes) => {
 
     score : {
         type : DataTypes.STRING,
-        allowNull: false,
     },
 
-    createdAt: {
-        type: DataTypes.DATE
-    }   
+    matchend : {
+        type: DataTypes.BOOLEAN,
+        defaultValue: false,
+        allowNull: false
+    }
 })
 
 return matchs;
