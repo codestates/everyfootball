@@ -4,17 +4,18 @@
 // 에러가 뜨는 상황
 
 const { users } = require('../../models');
+
 module.exports = async (req, res) => {
     const isExisted = await users.findOne({
     where : { userid : req.body.id }
     })
 		
 		if(!isExisted){
-			res.status(404).send({message : 'new'})
+			res.status(200).send({message : 'new'})
 		}else{
-			res.status(200).send({message : 'exist'})
+			res.status(401).send({message : 'exist'})
 		}
-    console.log(req.body)
+
 
 }
 
