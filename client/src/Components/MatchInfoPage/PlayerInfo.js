@@ -1,23 +1,23 @@
 import React, { useState } from 'react';
-// import { Link } from 'react-router-dom';
-// import axios from 'axios';
+import PlayerInfoBox from './PlayerInfoBox';
 
-//axios.defaults.withCredentials = true;
 
 export default function PlayerInfo () {
 
-
+  const [text, setText] = useState("신청하기");
   
+  const changeText = (e) => {
+    setText(el => el === "신청하기" ? "취소하기" : "신청하기" );
+  };
+
+
+
   return (
     <div>
       <div className='totalPlayer'>
-            <div className='playerInfo'>
-                선수정보
-                <div className='info'>
-                
-                </div>
-            </div>
-        </div>
+        <PlayerInfoBox />
+      </div>
+      <button onClick={changeText}>{text}</button>
     </div>
   );
 }
