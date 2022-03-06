@@ -1,14 +1,16 @@
 import React from "react";
-import UserinfoEditList from "../Components/Userinfo/UserinfoEditList";
-import UserinfoRecentList from "../Components/Userinfo/UserinfoRecentList";
-import UserinfoRecordList from "../Components/Userinfo/UserinfoRecordList";
+import UserDelete from "../Components/Userinfo/UserDelete";
+import UserinfoEdit from "../Components/Userinfo/UserinfoEdit";
+import UserinfoRecent from "../Components/Userinfo/UserinfoRecent";
+import UserinfoRecord from "../Components/Userinfo/UserinfoRecord";
 
 function Userinfo() {
     return (
         <>
-            <UserinfoEditList />
-            <UserinfoRecordList />
-            <UserinfoRecentList />
+            <UserDelete />
+            <UserinfoEdit />
+            <UserinfoRecord />
+            <UserinfoRecent />
         </>
     );
 }
