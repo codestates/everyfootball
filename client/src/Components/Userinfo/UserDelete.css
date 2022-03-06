@@ -3,15 +3,13 @@ button {
     float: right;
     margin: 0;
     padding: 0.5rem 1rem;
-    background: linear-gradient(to left, rgb(67, 46, 255), rgb(47, 224, 255));
+    background: linear-gradient(to left, #eee, white);
     font-family: "Noto Sans KR", sans-serif;
     font-size: 1rem;
     font-weight: 400;
     text-align: center;
     text-decoration: none;
-
     display: inline-block;
-    width: auto;
 
     border: none;
     border-radius: 4px;
@@ -19,6 +17,8 @@ button {
 button {
     /* 생략 */
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    border-radius: 10px;
+    width: 10%;
 
     cursor: pointer;
 

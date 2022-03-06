@@ -34,7 +34,7 @@ function UserinfoRecent({ name, date, myscore, score, goal, assist }) {
 
     return (
         <div>
-            <div>
+            <div className="text">
                 <h4>최근 10경기 기록</h4>
                 <table className="userinfo">
                     <tbody>

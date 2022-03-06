@@ -9,20 +9,42 @@
     margin: 0 auto;
     width: 500px;
 }
+.text {
+    text-align: left;
+}
 .userinfo {
     border-collapse: collapse;
-    border-top: 2px solid skyblue;
     border-spacing: 0;
     width: 100%;
-    border: 1px solid black;
     text-align: center;
     table-layout: auto;
     width: 100%;
     table-layout: fixed;
 }
-.userinfo th,
+/* .userinfo th,
 td {
     text-align: left;
     padding: 8px;
     border: 1px solid #ddd;
+} */
+table.userinfo {
+    border-collapse: separate;
+    border-spacing: 1px;
+    text-align: center;
+    line-height: 1.5;
+    margin: 20px 10px;
+}
+table.userinfo th {
+    width: 155px;
+    padding: 10px;
+    font-weight: bold;
+    vertical-align: top;
+    color: #fff;
+    background: black;
+}
+table.userinfo td {
+    width: 155px;
+    padding: 10px;
+    vertical-align: top;
+    background: linear-gradient(to left, #eee, white);
 }
