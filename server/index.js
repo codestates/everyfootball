@@ -25,8 +25,9 @@ app.get("/match/data/:matchid", matchcontrollers.data);
 app.get("/match/showmatchlist",matchcontrollers.showmatchlist);
 app.get("/match/record",matchcontrollers.record);
 app.post("/match/sendresult",matchcontrollers.sendresult);
-app.get("/match/joinmatch/:matchid",matchcontrollers.joinmatch)
-app.post("/user/existedid",usercontrollers.existedid)
+app.get("/match/joinmatch/:matchid",matchcontrollers.joinmatch);
+app.post("/user/existedid",usercontrollers.existedid);
+app.get("/user/logout", usercontrollers.logout);
 
 db.sequelize.sync().then((req) => {
   app.listen(port, function (){

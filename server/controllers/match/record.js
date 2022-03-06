@@ -49,6 +49,7 @@ module.exports = async (req, res) => {
         maxusers : maxuserpayload,
         topusers : topusers
     }})
+    
 // 최대골 유저 추출
 }
 
