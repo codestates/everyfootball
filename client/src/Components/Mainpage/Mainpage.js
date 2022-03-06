@@ -1,12 +1,11 @@
-import react from 'react'
-import Header from './Header'
-import Matchlist from './Matchlist'
-import Footer from './Footer'
+import react from "react";
+import Matchlist from "./Matchlist";
+
 const Mainpage = () => {
-    return (<div>
-            <Header/>
-            <Matchlist/>
-            <Footer/>
-            </div>)
-}
+    return (
+        <div>
+            <Matchlist />
+        </div>
+    );
+};
 export default Mainpage;

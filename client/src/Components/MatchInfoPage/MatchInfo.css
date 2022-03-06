@@ -1,12 +1,13 @@
-html,
+/* html,
 body {
   padding: 0;
   margin-left: 10em;
   margin-right: 10em;
-  width: 80%;
-  height: 80%;
+  width: 100%; 
+  height: 100%;
   margin-top: 5em;
-}
+} 
+html, body, * 셀렉터는 최대한 피해주세요 다른 컴포넌트에 영향이 갑니다.*/ 
 
 .stadium {
   border:1px solid black;
