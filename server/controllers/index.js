@@ -10,6 +10,7 @@ module.exports = {
     showmatchlist : require('./match/showmatchlist'),
     existedid : require('./user/existedid'),
     sendresult : require('./match/sendresult'),
-    joinmatch : require('./match/joinmatch')
+    joinmatch : require('./match/joinmatch'),
+    leavematch : require('./match/leavematch')
     
 }
