@@ -1,6 +1,12 @@
+const { users } = require('../../models');
 
 module.exports = (req, res) => {
-    console.log('signout')
-    res.status(200).json({ "url" : "user/signout/post", "body" : req.body})
+    users.destroy({
+        where : {
+            userid : req.body.userid
+        }
+    }).then(res.status(200).json({message : "Sign out done!"}))
+
+
 }
 

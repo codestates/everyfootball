@@ -1,6 +1,12 @@
+const { users } = require('../../models');
 
-module.exports = (req, res) => {
+module.exports = async (req, res) => {
     console.log('changeinfo')
-    res.status(200).json({ "url" : "user/changeinfo/post", "body" : req.body})
+
+    newuserinfo = req.body
+
+    await users.update(newuserinfo, {where : {userid : newuserinfo.userid}})
+    .then(res.status(200).json("done!"))
+
 }
 

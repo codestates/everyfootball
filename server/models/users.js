@@ -37,32 +37,46 @@ module.exports = (sequelize, DataTypes) => {
       allowNull : true,
 
     },
+
     totalAssist : {
       type : DataTypes.INTEGER,
       allowNull : true,
-
     },
-  
+
+    totalPoint : {
+      type : DataTypes.INTEGER,
+      allowNull : true,
+    },
+
+    totalMatch : {
+      type : DataTypes.INTEGER,
+      allowNull : true,
+    },
+
     totalWin : {
       type : DataTypes.INTEGER,
       allowNull : true,
-
     },
 
     Winrate : {
-      type : DataTypes.INTEGER,
+      type : DataTypes.STRING,
       allowNull : true,
     },
     
-    positon : {
+    position : {
       type : DataTypes.STRING,
       allowNull : true,
     },
 
     penalty : {
-      type : DataTypes.STRING,
+      type : DataTypes.INTEGER,
       allowNull : true,
     },
+
+    admin : {
+      type : DataTypes.BOOLEAN,
+      allowNull : false,
+    }
   })
 
   return users;
