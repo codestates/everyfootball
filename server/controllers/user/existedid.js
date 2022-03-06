@@ -19,9 +19,4 @@ module.exports = async (req, res) => {
 
 }
 
-  if (!isExisted) {
-    res.status(404).send({ message: "new" });
-  } else {
-    res.status(200).send({ message: "exist" });
-  }
-};
+
