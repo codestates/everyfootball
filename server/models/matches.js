@@ -2,16 +2,14 @@
 module.exports = (sequelize, DataTypes) => {
     const matchs = sequelize.define("matches",{
     matchid: {
-        type : DataTypes.STRING,
-        allowNull: false,
+        type : DataTypes.INTEGER,
+        autoIncrement: true,
         primaryKey: true,
-
     },
 
     time: {
         type : DataTypes.STRING,
         allowNull: false,
-
 
     },
     maxplayer: {
@@ -37,7 +35,6 @@ module.exports = (sequelize, DataTypes) => {
 
     score : {
         type : DataTypes.STRING,
-        allowNull: false,
     },
 
     matchend : {

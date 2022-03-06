@@ -8,7 +8,6 @@ module.exports = async (req, res) => {
     let matchlist = []
 
     if (logininfo){
-        //요청 들러온 토큰 정리 
         const token = logininfo.split(" ")[1]
         const data = jwt.verify(token, "1234")
         const userInfo = await users.findOne({

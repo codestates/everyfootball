@@ -1,12 +1,12 @@
 import React from "react";
 import LoginForm from "../Components/Login/LoginForm";
 import Footer from "../Components/Mainpage/Footer";
-import LoginHeader from "../Components/Login/LoginHeader";
+import Header from "../Components/Mainpage/Header";
 
 function Login() {
     return (
         <>
-            <LoginHeader />
+            <Header />
             <LoginForm />
             <Footer />
         </>

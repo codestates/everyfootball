@@ -1,74 +1,77 @@
 import React, { useState } from "react";
+
 import axios from "axios";
+
 import "./LoginForm.css";
 
-const LoginForm = () => {
-    const [inputId, setInputId] = useState("");
-    const [inputPassword, setInputPassword] = useState("");
+const LoginForm = ({ setIsLogin }) => {
+    const [loginInfo, setLoginInfo] = useState({
+        userid: "",
+        password: "",
+    });
 
-    const handleInputId = (e) => {
-        setInputId(e.target.value);
-    };
-
-    const handleInputPassword = (e) => {
-        setInputPassword(e.target.value);
+    const handleInputValue = (key) => (e) => {
+        setLoginInfo({ ...loginInfo, [key]: e.target.value.toLowerCase() });
     };
 
     const onClickLogin = () => {
-        // console.log("click login");
-        // console.log("ID : ", inputId);
-        // console.log("PW : ", inputPassword);
+        const { userid, password } = loginInfo;
+        if (userid === "") {
+            console.log("아이디를 입력하세요");
+            return;
+        } else if (password === "") {
+            console.log("비밀번호를 입력하세요");
+            return;
+        }
+        console.log("click login");
         axios
-            .post("http://localhost:4000/user/login", {
-                id: inputId,
-                password: inputPassword,
-            })
+            .post(
+                "http://localhost:4000/user/login",
+                {
+                    userid,
+                    password,
+                },
+                { "Content-Type": "application/json", withCredentials: true },
+            )
             .then((res) => {
-                // console.log(res);
-                const data = res.data;
-                // console.log(data.data);
-                // console.log("id: ", data.data.email);
-                // console.log("password: ", data.data.userPassword);
-                if (data.data.email === inputId) {
-                    // console.log("======================", "로그인 성공");
-                    localStorage.setItem("id", inputId);
-                    // console.log(localStorage);
+                console.log(res);
+                console.log(res.data.data.accessToken);
+                localStorage.setItem("accessToken", res.data.data.accessToken);
+                console.log("성공");
+                if (res.data.data.accessToken) {
+                    localStorage.setItem("accessToken", "로그인");
+                    console.log("======================", "로그인 성공");
+                    console.log(localStorage);
                 }
                 // 작업 완료 되면 페이지 이동(새로고침)
-                // document.location.href = '/'
-                window.location.replace("/");
+                // document.location.href = "/";
+                return window.location.replace("/");
             })
-
             .catch((error) => {
-                console.log(error.response);
-                const status = error.response.status;
-                console.log(status);
+                console.log(error);
                 alert("아이디와 비밀번호를 확인해 주세요.");
             });
     };
-
     return (
         <div className="wrap">
             <div className="login">
                 <h2>로그인</h2>
                 <hr />
                 {/* <div class="login_sns">
-            <li><Link to=""><i class="fab fa-kakaotalk"></i></Link></li>
-						<li><Link to=""><i class="fab fa-kakaotalk"></i></Link></li>
-            </div> */}
-
+<li><Link to=""><i class="fab fa-kakaotalk"></i></Link></li>
+<li><Link to=""><i class="fab fa-kakaotalk"></i></Link></li>
+</div> */}
                 <div className="login_id">
                     <h4>아이디</h4>
-                    <input type="text" placeholder="아이디" name="input_id" value={inputId} onChange={handleInputId} />
+                    <input type="text" placeholder="아이디" name="input_id" onChange={handleInputValue("userid")} />
                 </div>
                 <div className="login_pw">
                     <h4>비밀번호</h4>
                     <input
                         type="password"
-                        placeholder="비밀번호"
                         name="input_Password"
-                        value={inputPassword}
-                        onChange={handleInputPassword}
+                        placeholder="비밀번호"
+                        onChange={handleInputValue("password")}
                     />
                 </div>
                 <div className="submit">
