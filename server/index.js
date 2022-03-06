@@ -5,7 +5,8 @@ const usercontrollers = require("./controllers");
 const matchcontrollers = require("./controllers");
 const port = 4000
 
-const db = require('./models')
+const db = require('./models');
+const leavematch = require('./controllers/match/leavematch');
 
 app.use(express.json());
 app.use(
@@ -27,6 +28,7 @@ app.get("/match/showmatchlist",matchcontrollers.showmatchlist);
 app.get("/match/record",matchcontrollers.record);
 app.post("/match/sendresult",matchcontrollers.sendresult);
 app.get("/match/joinmatch/:matchid",matchcontrollers.joinmatch);
+app.get("/match/leavematch/:matchid",matchcontrollers.leavematch);
 app.post("/user/existedid",usercontrollers.existedid);
 app.get("/user/logout", usercontrollers.logout);
 
