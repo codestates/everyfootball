@@ -1,0 +1,36 @@
+button {
+    display: inline-block;
+    float: right;
+    margin: 0;
+    padding: 0.5rem 1rem;
+    background: linear-gradient(to left, rgb(67, 46, 255), rgb(47, 224, 255));
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: center;
+    text-decoration: none;
+
+    display: inline-block;
+    width: auto;
+
+    border: none;
+    border-radius: 4px;
+}
+button {
+    /* 생략 */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+
+    cursor: pointer;
+
+    transition: 0.5s;
+}
+/* button:active,
+button:hover,
+button:focus {
+    background: var(--button-hover-bg-color);
+    background-color: rgb(47, 224, 255);
+    outline: 0;
+}
+button:disabled {
+    opacity: 0.5;
+} */

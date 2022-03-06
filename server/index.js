@@ -10,7 +10,7 @@ const db = require('./models')
 app.use(express.json());
 app.use(
   cors({
-    origin: ["http://localhost:4000"],
+    origin: ["http://localhost:3000"],
     credentials: true,
     methods: ["GET", "POST", "OPTIONS"],
   })
@@ -25,6 +25,8 @@ app.post("/user/changeinfo", usercontrollers.changeinfo);
 app.post("/match/data", matchcontrorlers.data);
 app.get("/match/showmatchlist",matchcontrorlers.showmatchlist);
 app.get("/match/record",matchcontrorlers.record);
+
+app.post("/user/existedid", usercontrollers.existedid)
 
 db.sequelize.sync().then((req) => {
   app.listen(port, function (){

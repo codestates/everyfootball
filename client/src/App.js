@@ -2,7 +2,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import { Route, Switch, BrowserRouter } from "react-router-dom";
 import Mainpage from "./Components/Mainpage/Mainpage";
-import Signup from "./Components/Signup";
+import Signup from "./Components/Signup/Signup";
 import RecordBoard from "./Components/RecordBoardPage/RecordBoard";
 import MatchInfo from "./Components/MatchInfoPage/MatchInfo";
 import Login from "../src/Pages/Login";

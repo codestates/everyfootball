@@ -1,7 +1,7 @@
 import React from "react";
-import UserinfoEditList from "../Components/Userinfo/UserinfoEditList";
-import UserinfoRecentList from "../Components/Userinfo/UserinfoRecentList";
-import UserinfoRecordList from "../Components/Userinfo/UserinfoRecordList";
+import UserinfoEdit from "../Components/Userinfo/UserinfoEdit";
+import UserinfoRecent from "../Components/Userinfo/UserinfoRecent";
+import UserinfoRecord from "../Components/Userinfo/UserinfoRecordList";
 import Header from "../Components/Mainpage/Header";
 import Footer from "../Components/Mainpage/Footer";
 
@@ -9,9 +9,9 @@ function Userinfo() {
     return (
         <>
             <Header />
-            <UserinfoEditList />
-            <UserinfoRecordList />
-            <UserinfoRecentList />
+            <UserinfoEdit />
+            <UserinfoRecord />
+            <UserinfoRecent />
             <Footer />
         </>
     );
