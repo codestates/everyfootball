@@ -3,10 +3,13 @@ import React from "react";
 import "./UserDelete.css";
 
 const userDelete = ({ setLogin }) => {
+    const accessToken = localStorage.getItem("accessToken");
+
     axios
         .delete("http://localhost:4000/", {
             // headers:{localStorage.getItem("accessToken")}
-            headers: { "Content-Type": "application/json" },
+            headers: { authorization: `Bearer ${accessToken}` },
+            "Content-Type": "application/json",
         })
         .then((res) => {
             setLogin(false);
