@@ -1,6 +1,6 @@
 
 module.exports = (sequelize, DataTypes) => {
-    const playerinmatch = sequelize.define("playerinmatch",{
+    const playerinmatch = sequelize.define("playerinmatches",{
     id: {
         type : DataTypes.INTEGER,
         allowNull: false,

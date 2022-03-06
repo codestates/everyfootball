@@ -2,7 +2,7 @@ const express = require('express');
 const cors = require("cors");
 const app = express();
 const usercontrollers = require("./controllers");
-const matchcontrorlers = require("./controllers");
+const matchcontrollers = require("./controllers");
 const port = 4000
 
 const db = require('./models')
@@ -22,9 +22,13 @@ app.post("/user/signout", usercontrollers.signout);
 app.get("/user/userinfo", usercontrollers.userinfo);
 app.get("/user/existedid", usercontrollers.existedid);
 app.post("/user/changeinfo", usercontrollers.changeinfo);
-app.post("/match/data", matchcontrorlers.data);
-app.get("/match/showmatchlist",matchcontrorlers.showmatchlist);
-app.get("/match/record",matchcontrorlers.record);
+app.get("/match/data/:matchid", matchcontrollers.data);
+app.get("/match/showmatchlist",matchcontrollers.showmatchlist);
+app.get("/match/record",matchcontrollers.record);
+app.post("/match/sendresult",matchcontrollers.sendresult);
+app.get("/match/joinmatch/:matchid",matchcontrollers.joinmatch);
+app.post("/user/existedid",usercontrollers.existedid);
+app.get("/user/logout", usercontrollers.logout);
 
 app.post("/user/existedid", usercontrollers.existedid)
 
