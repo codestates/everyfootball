@@ -9,7 +9,7 @@ function UserinfoEdit({ name, userid, preferLocation, preferTime, position, gend
             return;
         } else {
             axios
-                .get(`https://jsonplaceholder.typicode.com/users/`, {
+                .get("http://localhost:4000/user/userinfo", {
                     headers: { authorization: `Bearer ${accessToken}` },
                     "Content-Type": "application/json",
                 })
@@ -25,24 +25,21 @@ function UserinfoEdit({ name, userid, preferLocation, preferTime, position, gend
         }
     };
     useEffect(() => {
-        if (userinfo && userinfo.data.length > 0) {
-            console.log(userinfo.data[0].name);
-        }
         userinfoEditHandler();
     }, []);
 
     return (
         <div className="text">
-            <h4>개인정보 수정</h4>
+            <h4>개인정보</h4>
             <table className="userinfo">
                 <tr>
-                    <td>이름: {name}</td>
-                    <td>아이디: {userid}</td>
-                    <td>선호 구장 위치: {preferLocation}</td>
-                    <td>선호 경기 시간: {preferTime} 시</td>
-                    <td>포지션: {position}</td>
-                    <td>성별: {gender}</td>
-                    <td>생년 월일: {birth}</td>
+                    <td className="text">이름: {userinfo && userinfo.data.data.userInfo.fullname}</td>
+                    <td className="text">아이디: {userinfo && userinfo.data.data.userInfo.userid}</td>
+                    {/* <td>선호 구장 위치: {preferLocation}</td>
+                    <td>선호 경기 시간: {preferTime} 시</td> */}
+                    <td className="text">포지션: {userinfo && userinfo.data.data.userInfo.position}</td>
+                    <td className="text">성별: {userinfo && userinfo.data.data.userInfo.gender}</td>
+                    {/* <td>생년 월일: {birth}</td> */}
                 </tr>
             </table>
         </div>

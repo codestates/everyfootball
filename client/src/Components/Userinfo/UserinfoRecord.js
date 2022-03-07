@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./UserinfoFormList.css";
 
-function UserinfoRecord({ game, goal, assist, penalty }) {
+function UserinfoRecord() {
     const accessToken = localStorage.getItem("accessToken");
     const [userinfo, setUserinfo] = useState("");
 
@@ -28,9 +28,6 @@ function UserinfoRecord({ game, goal, assist, penalty }) {
         }
     };
     useEffect(() => {
-        // if (userinfo && userinfo.data.length > 0) {
-        //     console.log(userinfo.data[0].name);
-        // }
         userinfoRecordHandler();
     }, []);
 
@@ -40,10 +37,10 @@ function UserinfoRecord({ game, goal, assist, penalty }) {
 
             <table className="userinfo">
                 <tr>
-                    <td>총 경기: {userinfo && userinfo.data.data.userInfo.totalMatch}</td>
-                    <td>총 득점: {userinfo && userinfo.data.data.userInfo.totalGoal}</td>
-                    <td>총 어시스트: {userinfo && userinfo.data.data.userInfo.totalAssist}</td>
-                    <td>패널티: {userinfo && userinfo.data.data.userInfo.penalty}</td>
+                    <td className="text">총 경기: {userinfo && userinfo.data.data.userInfo.totalMatch}</td>
+                    <td className="text">총 득점: {userinfo && userinfo.data.data.userInfo.totalGoal}</td>
+                    <td className="text">총 어시스트: {userinfo && userinfo.data.data.userInfo.totalAssist}</td>
+                    <td className="text">패널티: {userinfo && userinfo.data.data.userInfo.penalty}</td>
                 </tr>
             </table>
         </div>

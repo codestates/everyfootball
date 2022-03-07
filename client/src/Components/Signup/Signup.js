@@ -4,7 +4,7 @@ import { useState } from "react";
 import axios from "axios";
 import { useHistory } from "react-router-dom";
 
-const Signup = () => {
+function Signup() {
     const [userId, setUserId] = useState("");
 
     const isMoreThan4Length = () => {
@@ -117,32 +117,24 @@ const Signup = () => {
 
     const submit = () => {
         idExistedCheck();
-        if (
-            isMoreThan4Length() &&
-            isPasswordEquel() &&
-            isPasswordValidate() &&
-            onlyNumberAndEnglish() &&
-            nameCheck() &&
-            phoneNumberCheck() &&
-            idExisted
-        ) {
+        if (isPasswordEquel() && isPasswordValidate() && nameCheck() && phoneNumberCheck() && idExisted) {
             axios
                 .post("http://localhost:4000/user/signup", {
                     userid: userId,
-                    password,
+                    password: password,
                     fullname: name,
-                    gender,
-                    position,
+                    gender: gender,
+                    position: position,
                     preferredtime: matchTime,
                     preferredloca: matchLocation,
                     phonenum: phoneNumber,
                 })
                 .then((response) => {
-                    alert("성공");
                     history.push("/");
+                })
+                .catch((err) => {
+                    throw err;
                 });
-        } else {
-            alert("실패");
         }
     };
 
@@ -253,13 +245,13 @@ const Signup = () => {
                 <div>
                     <div>선호경기시간</div>
                     <div class="inputbox">
-                        <input type="text" onChange={setMatchTime} />
+                        <input type="text" onChange={(e) => setMatchTime(e.target.value)} />
                     </div>
                 </div>
                 <div>
                     <div>선호경기위치</div>
                     <div class="inputbox">
-                        <input type="text" onChange={setMatchLocation} />
+                        <input type="text" onChange={(e) => setMatchLocation(e.target.value)} />
                     </div>
                 </div>
                 <div id="signup-button" onClick={submit}>
@@ -268,6 +260,6 @@ const Signup = () => {
             </div>
         </div>
     );
-};
+}
 
 export default Signup;
