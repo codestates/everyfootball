@@ -1,16 +1,17 @@
-import logo from "./logo.svg";
 import "./App.css";
 import { Route, Switch, BrowserRouter } from "react-router-dom";
 import Mainpage from "./Components/Mainpage/Mainpage";
 import Signup from "./Components/Signup/Signup";
 import RecordBoard from "./Components/RecordBoardPage/RecordBoard";
 import MatchInfo from "./Components/MatchInfoPage/MatchInfo";
-import Login from "../src/Pages/Login";
+import Login from "./Pages/Login";
 import Userinfo from "./Pages/Userinfo";
-
+import Footer from "./Components/Mainpage/Footer";
+import Header from "./Components/Mainpage/Header";
 function App() {
     return (
         <BrowserRouter>
+            <Header />
             <div className="App">
                 <Switch>
                     <Route exact path="/">
@@ -33,6 +34,7 @@ function App() {
                     </Route>
                 </Switch>
             </div>
+            <Footer />
         </BrowserRouter>
     );
 }

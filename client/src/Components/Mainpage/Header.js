@@ -6,7 +6,7 @@ import logo from "./logo.png";
 const Header = () => {
     const [isLogin, setIsLogin] = useState(false);
     return (
-        <header id="header">
+        <header>
             <div>
                 <h1>
                     <Link to="/">

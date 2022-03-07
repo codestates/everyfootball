@@ -39,7 +39,7 @@ const LoginForm = ({ setIsLogin }) => {
                 localStorage.setItem("accessToken", res.data.data.accessToken);
                 console.log("성공");
                 if (res.data.data.accessToken) {
-                    localStorage.setItem("accessToken", "로그인");
+                    localStorage.setItem("accessToken", res.data.data.accessToken);
                     console.log("======================", "로그인 성공");
                     console.log(localStorage);
                 }
@@ -55,8 +55,6 @@ const LoginForm = ({ setIsLogin }) => {
     return (
         <div className="wrap">
             <div className="login">
-                <h2>로그인</h2>
-                <hr />
                 {/* <div class="login_sns">
 <li><Link to=""><i class="fab fa-kakaotalk"></i></Link></li>
 <li><Link to=""><i class="fab fa-kakaotalk"></i></Link></li>

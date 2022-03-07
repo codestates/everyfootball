@@ -1,6 +1,93 @@
-*{
-    margin: 0 auto;
-}
 .hide {
     display: none;
+}
+#signup-form {
+    margin: 0 auto;
+    width: 430px;
+    font-family: "NanumSquareRound";
+    font-weight: 700;
+    text-align: left;
+}
+#signup-form > div {
+    margin: 15px;
+}
+
+.inputbox1 {
+    width: 250px;
+    height: 40px;
+    border: solid 2px gainsboro;
+}
+.inputbox1 > input {
+    padding: 10px;
+    width: 246px;
+    border-style: none;
+}
+
+.inputbox1 > input:focus {
+    outline: none;
+}
+
+#id-check {
+    border: none;
+    width: 100px;
+    text-align: center;
+    height: 40px;
+    padding: 8px;
+    margin-left: 5px;
+    background-color: #2a2a2a;
+    color: gainsboro;
+    border-radius: 15px;
+    font-weight: 800;
+    cursor: pointer;
+}
+#id {
+    display: flex;
+}
+.inputbox {
+    height: 40px;
+    border: solid 2px gainsboro;
+}
+
+.inputbox > input {
+    padding: 10px;
+    width: 395px;
+    border-style: none;
+}
+.inputbox > input:focus {
+    outline: none;
+}
+
+#signup-button {
+    height: 45px;
+    border: solid 1px gainsboro;
+    text-align: center;
+    padding: 10px;
+    margin: 15px;
+    background-color: #2a2a2a;
+    color: white;
+    cursor: pointer;
+}
+
+#button {
+    display: flex;
+}
+
+#button > div {
+    display: inline-block;
+    background-color: whitesmoke;
+    width: 100px;
+    height: 40px;
+    border: solid 1px whitesmoke;
+    border-radius: 20px;
+    text-align: center;
+    line-height: 250%;
+    cursor: pointer;
+}
+
+.gender-focused {
+    color: red;
+}
+
+.position-focused {
+    color: red;
 }
