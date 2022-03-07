@@ -63,7 +63,7 @@ module.exports = (sequelize, DataTypes) => {
       allowNull : true,
     },
 
-    Winrate : {
+    winrate : {
       type : DataTypes.STRING,
       allowNull : true,
     },
