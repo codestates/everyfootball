@@ -11,6 +11,13 @@
 }
 .text {
     text-align: left;
+    border-radius: 15px 15px 15px 0;
+    border: 3px solid gainsboro;
+    padding: 0.5em 0.6em;
+    color: black;
+    width: 50%;
+    height: 50%;
+    margin: 0 auto;
 }
 .userinfo {
     border-collapse: collapse;
@@ -20,6 +27,9 @@
     table-layout: auto;
     width: 100%;
     table-layout: fixed;
+    width: 50%;
+    height: 50%;
+    margin: 0 auto;
 }
 /* .userinfo th,
 td {

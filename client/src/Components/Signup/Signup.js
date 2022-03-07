@@ -116,25 +116,26 @@ function Signup() {
     const history = useHistory();
 
     const submit = () => {
-        // idExistedCheck();
-
-        axios
-            .post("http://localhost:4000/user/signup", {
-                userid: userId,
-                password: password,
-                fullname: name,
-                gender: gender,
-                position: position,
-                preferredtime: matchTime,
-                preferredloca: matchLocation,
-                phonenum: phoneNumber,
-            })
-            .then((response) => {
-                history.push("/");
-            })
-            .catch((err) => {
-                throw err;
-            });
+        idExistedCheck();
+        if (isPasswordEquel() && isPasswordValidate() && nameCheck() && phoneNumberCheck()) {
+            axios
+                .post("http://localhost:4000/user/signup", {
+                    userid: userId,
+                    password: password,
+                    fullname: name,
+                    gender: gender,
+                    position: position,
+                    preferredtime: matchTime,
+                    preferredloca: matchLocation,
+                    phonenum: phoneNumber,
+                })
+                .then((response) => {
+                    history.push("/");
+                })
+                .catch((err) => {
+                    throw err;
+                });
+        }
     };
 
     return (
@@ -250,7 +251,7 @@ function Signup() {
                 <div>
                     <div>선호경기위치</div>
                     <div class="inputbox">
-                        <input type="text" onChange={(e) => setMatchLocation(e.target.value)} />
+                        <input type="text" onChange={setMatchLocation} />
                     </div>
                 </div>
                 <div id="signup-button" onClick={submit}>

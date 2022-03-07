@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
-function UserinfoRecent({ name, date, myscore, score, goal, assist }) {
+function UserinfoRecent() {
     const accessToken = localStorage.getItem("accessToken");
     const [userinfo, setUserinfo] = useState("");
     console.log("token", accessToken);
@@ -27,37 +27,24 @@ function UserinfoRecent({ name, date, myscore, score, goal, assist }) {
         }
     };
     useEffect(() => {
-        if (userinfo && userinfo.data.length > 0) {
-            console.log(userinfo.data[0].name);
-        }
         userinfoRecentHandler();
     }, []);
 
     return (
         <div>
             <div className="text">
-                <h4>최근 10경기 기록</h4>
+                <h4>최근 경기 기록</h4>
                 <table className="userinfo">
                     <tbody>
                         <tr>
-                            <td>경기 날짜</td>
-                            <td>스코어</td>
-                            <td>득점</td>
-                            <td>어시스트</td>
+                            <td className="text">경기 날짜: {}</td>
+                            <td className="text">스코어</td>
+                            <td className="text">득점: {userinfo && userinfo.data.data.userInfo.totalGoal}</td>
+                            <td className="text">어시스트</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
-            <table className="userinfo">
-                <tr>
-                    <td>{userinfo && userinfo.data[0].name}</td>
-                    <td>
-                        {myscore} : {score}
-                    </td>
-                    <td>{userinfo && userinfo.data[0].username}</td>
-                    <td>{assist}</td>
-                </tr>
-            </table>
         </div>
     );
 }
