@@ -1,15 +1,14 @@
-const { matchs } = require('../../models');
-
+const { matches } = require('../../models');
 
 module.exports = async(req, res) => {
 
-    const matches = await matchs.findAll({
+    const matchlist = await matches.findAll({
         where : {
             matchend : false
         }
     })
 
-    console.log('showmatchlist')
-    res.status(200).json({ matches : matches})
+    console.log(matchlist.length)
+    res.status(200).json({ matches : matchlist})
 }
 
