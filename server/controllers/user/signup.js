@@ -10,8 +10,10 @@ module.exports = (req, res) => {
         password : req.body.password,
         fullname : req.body.fullname,
         gender : req.body.gender,
-        location : req.body.location,
-        position : req.body.position
+        phonenum : req.body.phonenum,
+        position : req.body.position,
+        preferredtime : req.body.preferredtime,
+        preferredloca : req.body.preferredloca
     }
 
     sequelize.sync().then((result)=> {
@@ -20,8 +22,9 @@ module.exports = (req, res) => {
         password : req.body.password,
         fullname : req.body.fullname,
         gender : req.body.gender,
-        location : req.body.location,
-        position : req.body.position})
+        position : req.body.position,
+        preferredtime : req.body.preferredtime,
+        preferredloca : req.body.preferredloca})
     })
     .catch((err)=> {
     console.log(err)
