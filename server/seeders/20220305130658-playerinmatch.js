@@ -9,9 +9,8 @@ module.exports = {
     for (let i = 0; i < 5; i++){
       for(let j = 0; j < 5; j++){
         let obj = {
-          id : `${parseInt(id)}`,
           userid: "user"+j,
-          matchid : i,
+          matchid : i+1,
           goal : goal[j],
           shooting : goal[j]+2,
           assist : 1,

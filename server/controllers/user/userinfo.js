@@ -22,13 +22,16 @@ module.exports = async (req, res) => {
                 userid: data.userid}
         })
 
-        for (let i =0; i < lastmatch.length; i++){
+        console.log(lastmatch.length)
+
+        for (let i = 0; i < lastmatch.length; i++){
             let target = lastmatch[i]
 
             const time = await matches.findOne({
                 where : {
                     matchid : target.matchid
                 },attributes : ['time']})
+            
 
             const score = await matches.findOne({
                 where : {
@@ -42,10 +45,11 @@ module.exports = async (req, res) => {
                 assist : target.assist,
                 win : target.win,
             }
+
             matchlist.push(payload)
         }
 
-        console.log(matchlist)
+        // console.log(matchlist)
         res.status(200).json({data: {userInfo}, last10match : matchlist})
 
 
