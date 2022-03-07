@@ -8,6 +8,8 @@ import Login from "./Pages/Login";
 import Userinfo from "./Pages/Userinfo";
 import Footer from "./Components/Mainpage/Footer";
 import Header from "./Components/Mainpage/Header";
+import axios from "axios";
+
 function App() {
     return (
         <BrowserRouter>
