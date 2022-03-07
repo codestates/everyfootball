@@ -26,6 +26,11 @@ module.exports = (sequelize, DataTypes) => {
       allowNull : false,
     },
 
+    phonenum : {
+      type : DataTypes.STRING,
+      allowNull : false,
+    },
+
     totalGoal : {
       type : DataTypes.INTEGER,
       allowNull : true,
@@ -67,6 +72,17 @@ module.exports = (sequelize, DataTypes) => {
       type : DataTypes.STRING,
       allowNull : true,
     },
+
+    preferredtime : {
+      type : DataTypes.STRING,
+      allowNull : true,
+    },
+
+    preferredloca : {
+      type : DataTypes.STRING,
+      allowNull : true,
+    },
+    
 
     penalty : {
       type : DataTypes.INTEGER,

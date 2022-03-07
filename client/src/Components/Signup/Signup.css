@@ -9,9 +9,9 @@
   text-align: left;
 }
 #signup-form > div {
- margin: 15px;
+    margin: 15px;
 }
- 
+
 .inputbox1 {
  width:250px;
  height: 45px;
@@ -24,7 +24,7 @@
 }
 
 .inputbox1 > input:focus {
- outline:none;
+    outline: none;
 }
 
 #id-check {
@@ -41,7 +41,7 @@
  cursor: pointer;
 }
 #id {
- display: flex;
+    display: flex;
 }
 .inputbox {
  height: 45px;
@@ -54,7 +54,7 @@
  border-style: none;
 }
 .inputbox > input:focus {
- outline:none;
+    outline: none;
 }
 
 #signup-button {
@@ -69,32 +69,25 @@
 }
 
 #button {
- display: flex;
+    display: flex;
 }
 
 #button > div {
- display: inline-block;
- background-color: whitesmoke;
- width: 100px;
- height: 40px;
- border : solid 1px whitesmoke;
- border-radius: 20px;
- text-align: center;
- line-height:250%;
- cursor: pointer;
+    display: inline-block;
+    background-color: whitesmoke;
+    width: 100px;
+    height: 40px;
+    border: solid 1px whitesmoke;
+    border-radius: 20px;
+    text-align: center;
+    line-height: 250%;
+    cursor: pointer;
 }
 
 .gender-focused {
-  color: red;
+    color: red;
 }
 
 .position-focused {
-  color: red;
+    color: red;
 }
-
-
-
-
-
-
-

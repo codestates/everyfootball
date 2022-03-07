@@ -9,7 +9,7 @@ function UserinfoEdit({ name, userid, preferLocation, preferTime, position, gend
             return;
         } else {
             axios
-                .put(`https://jsonplaceholder.typicode.com/users/`, {
+                .get(`https://jsonplaceholder.typicode.com/users/`, {
                     headers: { authorization: `Bearer ${accessToken}` },
                     "Content-Type": "application/json",
                 })

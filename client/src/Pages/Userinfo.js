@@ -7,10 +7,10 @@ import UserinfoRecord from "../Components/Userinfo/UserinfoRecord";
 function Userinfo() {
     return (
         <>
-            <UserDelete />
-            <UserinfoEdit />
+            {/* <UserDelete /> */}
+            {/* <UserinfoEdit /> */}
             <UserinfoRecord />
-            <UserinfoRecent />
+            {/* <UserinfoRecent /> */}
         </>
     );
 }
