@@ -1,0 +1,36 @@
+.match-li {
+  width: 1200px;
+  padding: 35px;
+  border-bottom : solid 1px gainsboro;
+  margin: 0 auto;
+}
+
+.match-link {
+
+}
+.match-time {
+  font-weight: 700;
+  display:inline-block;
+  float:left;
+  font-size:15px;
+}
+.match-info {
+  display:inline-block;
+  text-align: center;
+}
+.match-info > span {
+  color : gray;
+}
+
+.match-status {
+  display:inline-block;
+  float:right;
+  border: 1px solid whitesmoke;
+  width:100px;
+  height:40px;
+  border-radius: 20px;
+  background-color: whitesmoke;
+  color:gainsboro;
+  line-height: 35px;
+}
+

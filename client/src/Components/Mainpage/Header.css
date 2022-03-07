@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 header { 
-  background: #f6f5ef;   
+  background: #2a2a2a;   
   position: relative;
 }
 header > div { position: relative; width: 1150px; margin: 0 auto;}
@@ -11,10 +11,10 @@ header > div > h1 { float: left; padding: 22px 0 24px; }
 header > div > nav { float:right; padding: 64px 0 0 0;}
 header > div > nav > ul > li { float: left; list-style-type: none;}
 header > div > nav > ul > li > a { display: block; padding: 15px 25px 0;height: 50px;
-  font-size: 20px; color:#333; line-height: 100%;}
+  font-size: 20px; color:gainsboro; line-height: 100%;}
 header > div .spot { position: absolute; right: 0; top: 20px;}
 header > div .spot > li { float: left; position:relative; list-style-type: none;}
-header > div .spot > li > a { padding: 15px; font-size: 15px; color:#333;}
+header > div .spot > li > a { padding: 15px; font-size: 15px; color:gainsboro;}
 header > div .spot > li ~ li:after { content: ""; position: absolute; left: 0; top: 0;
 width: 1px; height:0.6rem; background: #e5e5e5; transform: translateY(-25%);}
 header > div .spot > li:last-child:after { display: none;}
