@@ -4,7 +4,7 @@ footer {
   width: 100%;
   margin-bottom: 0;
   position: relative;
-  transform:translateY(130%)
+  transform:translateY(152%);
 }
 footer > div#company {
   display: flex;

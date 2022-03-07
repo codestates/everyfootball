@@ -29,24 +29,27 @@ const Signup = () => {
         }
     };
 
+    const [idExisted, setIdExisted] = useState(false);
     const idExistedCheck = () => {
         let idConfirm = document.querySelector(".id-confirm");
         let idExisted = document.querySelector(".id-existed");
         let idNewed = document.querySelector(".id-new");
         if (isMoreThan4Length() && onlyNumberAndEnglish()) {
             axios
-                .post("http://localhost:4000/user/existedid", {
+                .post(`http://localhost:4000/user/existedid`, {
                     userid: userId,
                 })
                 .then((response) => {
                     if (response.data.message === "exist") {
                         idConfirm.classList.add("hide");
                         idExisted.classList.remove("hide");
-                        return false;
+                        idNewed.classList.add("hide");
+                        setIdExisted(false);
                     } else if (response.data.message === "new") {
                         idConfirm.classList.add("hide");
                         idNewed.classList.remove("hide");
-                        return true;
+                        idExisted.classList.add("hide");
+                        setIdExisted(true);
                     }
                 })
                 .catch((err) => {
@@ -113,12 +116,6 @@ const Signup = () => {
     const history = useHistory();
 
     const submit = () => {
-        isMoreThan4Length();
-        isPasswordEquel();
-        isPasswordValidate();
-        onlyNumberAndEnglish();
-        nameCheck();
-        phoneNumberCheck();
         idExistedCheck();
         if (
             isMoreThan4Length() &&
@@ -126,24 +123,26 @@ const Signup = () => {
             isPasswordValidate() &&
             onlyNumberAndEnglish() &&
             nameCheck() &&
-            idExistedCheck() &&
-            phoneNumberCheck()
+            phoneNumberCheck() &&
+            idExisted
         ) {
             axios
                 .post("http://localhost:4000/user/signup", {
                     userid: userId,
                     password,
-                    passwordCheck: passwordRetype,
                     fullname: name,
                     gender,
                     position,
-                    matchtime: matchTime,
-                    matchlocation: matchLocation,
-                    phonenumber: phoneNumber,
+                    preferredtime: matchTime,
+                    preferredloca: matchLocation,
+                    phonenum: phoneNumber,
                 })
                 .then((response) => {
+                    alert("성공");
                     history.push("/");
                 });
+        } else {
+            alert("실패");
         }
     };
 
@@ -164,7 +163,7 @@ const Signup = () => {
                     <div class="id-validate-fail hide">아이디는 영어 또는 숫자만 가능합니다.</div>
                     <div class="id-confirm">중복검사를 진행해 주세요</div>
                     <div class="id-existed hide">중복된 아이디 입니다.</div>
-                    <div class="id-new hide">생성 가능한 아이디 입니다.</div>
+                    <div class="id-new hide">중복되지 않은 아이디 입니다.</div>
                 </div>
                 <div>
                     <div>비밀번호</div>
