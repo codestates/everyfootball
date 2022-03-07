@@ -35,13 +35,6 @@ li {
     flex-direction: column;
 }
 
-h2 {
-    color: skyblue;
-    font-size: 2em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 /* .login_sns {
     padding: 20px;
     display: flex;
@@ -70,12 +63,17 @@ h2 {
 }
 
 .login_id input {
-    width: 100%;
-    height: 50px;
-    border-radius: 30px;
-    margin-top: 10px;
-    padding: 0px 20px;
-    border: 1px solid lightgray;
+    width: 250px;
+    height: 40px;
+    border: solid 2px gainsboro;
+}
+.login_id > input {
+    padding: 10px;
+    width: 246px;
+    border-style: none;
+}
+
+.login_id > input:focus {
     outline: none;
 }
 
@@ -85,13 +83,19 @@ h2 {
 }
 
 .login_pw input {
-    width: 100%;
-    height: 50px;
-    border-radius: 30px;
-    margin-top: 10px;
-    padding: 0px 20px;
-    border: 1px solid lightgray;
-    outline: none;
+    width: 250px;
+    height: 40px;
+    border: solid 2px gainsboro;
+}
+.login_pw input {
+    width: 250px;
+    height: 40px;
+    border: solid 2px gainsboro;
+}
+.login_pw > input {
+    padding: 10px;
+    width: 246px;
+    border-style: none;
 }
 
 .submit {
@@ -99,13 +103,27 @@ h2 {
     width: 80%;
 }
 .submit button {
-    width: 100%;
-    height: 50px;
-    border: 0;
-    outline: none;
-    border-radius: 40px;
-    background: linear-gradient(to left, rgb(67, 46, 255), rgb(47, 224, 255));
+    height: 45px;
+    border: solid 1px gainsboro;
+    text-align: center;
+    padding: 10px;
+    margin: 15px;
+    background-color: #2a2a2a;
     color: white;
-    font-size: 1.2em;
-    letter-spacing: 2px;
+    cursor: pointer;
+}
+#button {
+    display: flex;
+}
+
+#button > div {
+    display: inline-block;
+    background-color: whitesmoke;
+    width: 100px;
+    height: 40px;
+    border: solid 1px whitesmoke;
+    border-radius: 20px;
+    text-align: center;
+    line-height: 250%;
+    cursor: pointer;
 }
