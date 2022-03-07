@@ -1,9 +1,8 @@
-const { matchs } = require('../../models');
-
+const { sequelize ,playerinmatches, users,matches} = require('../../models');
 
 module.exports = async(req, res) => {
 
-    const matches = await matchs.findAll({
+    const matches = await matches.findAll({
         where : {
             matchend : false
         }

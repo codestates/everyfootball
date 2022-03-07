@@ -8,7 +8,7 @@ module.exports = async (req, res) => {
 		if(!isExisted){
 			res.status(200).send({message : 'new'})
 		}else{
-			res.status(404).send({message : 'exist'})
+			res.status(200).send({message : 'exist'})
 		}
 }
 
