@@ -2,23 +2,23 @@
     display: none;
 }
 #signup-form {
-  margin : 0 auto;
+  margin : 50px auto;
   width: 430px;
   font-family: "NanumSquareRound";
   font-weight: 700;
   text-align: left;
-}ㄴ
+}
 #signup-form > div {
  margin: 15px;
 }
  
 .inputbox1 {
  width:250px;
- height: 40px;
+ height: 45px;
  border : solid 2px gainsboro;
 }
 .inputbox1 > input {
- padding: 10px;
+ padding: 13px;
  width: 246px;
  border-style: none;
 }
@@ -31,8 +31,8 @@
  border:none;
  width: 100px;
  text-align: center;
- height: 40px;
- padding: 8px;
+ height: 45px;
+ padding: 10px;
  margin-left: 5px;
  background-color: #2a2a2a;
  color:gainsboro;
@@ -44,12 +44,12 @@
  display: flex;
 }
 .inputbox {
- height: 40px;
+ height: 45px;
  border : solid 2px gainsboro;
 }
 
 .inputbox > input {
- padding: 10px;
+ padding: 13px;
  width: 395px;
  border-style: none;
 }
@@ -62,7 +62,7 @@
  border : solid 1px gainsboro;
  text-align: center;
  padding: 10px;
- margin: 15px;
+ margin: 10px;
  background-color: #2a2a2a;
  color: white;
  cursor: pointer;
