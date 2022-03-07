@@ -7,16 +7,21 @@ import axios from "axios";
 const Header = () => {
     const [isLogin, setIsLogin] = useState(false);
     // axios() 로그아웃 기능 구현
-    
+
     return (
         <header>
             <div>
                 <h1>
                     <Link to="/">
-                        <img src={logo} alt="everyfootball" />
+                        <img
+                            src={logo}
+                            alt="everyfootball"
+                            onClick={() => {
+                                console.log(console.log(localStorage.getItem("accessToken")));
+                            }}
+                        />
                     </Link>
                 </h1>
-                <h2 class="hide">대메뉴</h2>
                 <nav>
                     <ul>
                         <li>
@@ -36,31 +41,36 @@ const Header = () => {
                         </li>
                     </ul>
                 </nav>
-                <ul class="spot">
-                    <li>
-                        <Link to="/login" style={{ textDecoration: "none" }}>
-                            로그인
-                        </Link>
-                    </li>
-                    <li>
-                        <Link to="/signup" style={{ textDecoration: "none" }}>
-                            회원가입
-                        </Link>
-                    </li>
-                    <li>
-                        <a>강호중님</a>
-                    </li>
-                    <li>
-                        <Link to="/" style={{ textDecoration: "none" }}>
-                            로그아웃
-                        </Link>
-                    </li>
-                    <li>
-                        <Link to="/userinfo" style={{ textDecoration: "none" }}>
-                            마이페이지
-                        </Link>
-                    </li>
-                </ul>
+                {localStorage.getItem("accessToken") ? (
+                    <ul class="spot">
+                        <li>
+                            <a>강호중님</a>
+                        </li>
+                        <li>
+                            <Link to="/" style={{ textDecoration: "none" }}>
+                                로그아웃
+                            </Link>
+                        </li>
+                        <li>
+                            <Link to="/userinfo" style={{ textDecoration: "none" }}>
+                                마이페이지
+                            </Link>
+                        </li>
+                    </ul>
+                ) : (
+                    <ul class="spot">
+                        <li>
+                            <Link to="/login" style={{ textDecoration: "none" }}>
+                                로그인
+                            </Link>
+                        </li>
+                        <li>
+                            <Link to="/signup" style={{ textDecoration: "none" }}>
+                                회원가입
+                            </Link>
+                        </li>
+                    </ul>
+                )}
             </div>
         </header>
     );
