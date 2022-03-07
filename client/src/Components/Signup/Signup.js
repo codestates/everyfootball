@@ -117,7 +117,7 @@ function Signup() {
 
     const submit = () => {
         idExistedCheck();
-        if (isPasswordEquel() && isPasswordValidate() && nameCheck() && phoneNumberCheck()) {
+        if (isPasswordEquel() && isPasswordValidate() && nameCheck() && phoneNumberCheck() && idExisted) {
             axios
                 .post("http://localhost:4000/user/signup", {
                     userid: userId,
@@ -251,7 +251,7 @@ function Signup() {
                 <div>
                     <div>선호경기위치</div>
                     <div class="inputbox">
-                        <input type="text" onChange={setMatchLocation} />
+                        <input type="text" onChange={(e) => setMatchLocation(e.target.value)} />
                     </div>
                 </div>
                 <div id="signup-button" onClick={submit}>

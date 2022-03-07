@@ -6,8 +6,19 @@ import logo from "./logo.png";
 import axios from "axios";
 const Header = () => {
     const [isLogin, setIsLogin] = useState(false);
-    // axios() 로그아웃 기능 구현
 
+    // axios() 로그아웃 기능 구현
+    const isLogOut = () => {
+        axios
+            .get("http://localhost:4000/user/logout", { withCredentials: true })
+            .then((res) => {
+                localStorage.removeItem("accessToken");
+                window.location.replace("/");
+            })
+            .catch((err) => {
+                console.log(err);
+            });
+    };
     return (
         <header>
             <div>
@@ -17,7 +28,7 @@ const Header = () => {
                             src={logo}
                             alt="everyfootball"
                             onClick={() => {
-                                console.log(console.log(localStorage.getItem("accessToken")));
+                                console.log(console.log());
                             }}
                         />
                     </Link>
@@ -47,7 +58,7 @@ const Header = () => {
                             <a>강호중님</a>
                         </li>
                         <li>
-                            <Link to="/" style={{ textDecoration: "none" }}>
+                            <Link to="/" style={{ textDecoration: "none" }} onClick={isLogOut}>
                                 로그아웃
                             </Link>
                         </li>
