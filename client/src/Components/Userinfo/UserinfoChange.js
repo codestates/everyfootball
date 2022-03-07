@@ -2,55 +2,51 @@ import React, { useState } from "react";
 
 import axios from "axios";
 
-import "./LoginForm.css";
-
-const LoginForm = ({ setIsLogin }) => {
-    const [loginInfo, setLoginInfo] = useState({
+const UserinfoChange = () => {
+    const [isedit, setIsedit] = useState({
         userid: "",
-        password: "",
+        fullname: "",
+        position: "",
     });
 
     const handleInputValue = (key) => (e) => {
-        setLoginInfo({ ...loginInfo, [key]: e.target.value.toLowerCase() });
+        setIsedit({ ...isedit, [key]: e.target.value.toLowerCase() });
     };
 
     const onClickLogin = () => {
-        const { userid, password } = loginInfo;
+        const { userid, fullname, position } = isedit;
         if (userid === "") {
             console.log("아이디를 입력하세요");
             return;
-        } else if (password === "") {
-            console.log("비밀번호를 입력하세요");
+        } else if (fullname === "") {
+            console.log("이름을 입력하세요");
+            return;
+        } else if (position === "") {
+            console.log("포지션을 입력하세요");
             return;
         }
-        console.log("click login");
+        console.log("click changeinfo");
         axios
             .post(
-                "http://localhost:4000/user/login",
+                "http://localhost:4000/user/changeinfo",
                 {
                     userid,
-                    password,
+                    fullname,
+                    position,
                 },
                 { "Content-Type": "application/json", withCredentials: true },
             )
             .then((res) => {
                 console.log(res);
-                console.log(res.data.data.accessToken);
-                localStorage.setItem("accessToken", res.data.data.accessToken);
                 console.log("성공");
-                if (res.data.data.accessToken) {
-                    localStorage.setItem("accessToken", res.data.data.accessToken);
-                    console.log("======================", "로그인 성공");
-                    console.log(localStorage);
-                    setIsLogin(true);
+                console.log(res.data);
+                if (res.status === 200) {
+                    alert("수정 완료했습니다.");
+                    return window.location.replace("/userinfo");
                 }
-                // 작업 완료 되면 페이지 이동(새로고침)
-                // document.location.href = "/";
-                return window.location.replace("/");
             })
             .catch((error) => {
                 console.log(error);
-                alert("아이디와 비밀번호를 확인해 주세요.");
             });
     };
     return (
@@ -65,20 +61,30 @@ const LoginForm = ({ setIsLogin }) => {
                     <input type="text" placeholder="아이디" name="input_id" onChange={handleInputValue("userid")} />
                 </div>
                 <div className="login_pw">
-                    <h4>비밀번호</h4>
+                    <h4>이름</h4>
                     <input
-                        type="password"
+                        type="text"
                         name="input_Password"
-                        placeholder="비밀번호"
-                        onChange={handleInputValue("password")}
+                        placeholder="이름"
+                        onChange={handleInputValue("fullname")}
                     />
                 </div>
+                <div className="login_pw">
+                    <h4>포지션</h4>
+                    <input
+                        type="text"
+                        name="input_Password"
+                        placeholder="포지션"
+                        onChange={handleInputValue("position")}
+                    />
+                </div>
+
                 <div className="submit">
-                    <button onClick={onClickLogin}>로그인</button>
+                    <button onClick={onClickLogin}>수정</button>
                 </div>
             </div>
         </div>
     );
 };
 
-export default LoginForm;
+export default UserinfoChange;
