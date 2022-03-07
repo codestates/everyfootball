@@ -1,9 +1,13 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
-function UserinfoEdit({ name, userid, preferLocation, preferTime, position, gender, birth }) {
+function UserinfoEdit() {
     const accessToken = localStorage.getItem("accessToken");
     const [userinfo, setUserinfo] = useState("");
+
+    const handleModal = () => {
+        window.location.replace("/changeinfo");
+    };
     const userinfoEditHandler = () => {
         if (!accessToken) {
             return;
@@ -42,6 +46,7 @@ function UserinfoEdit({ name, userid, preferLocation, preferTime, position, gend
                     {/* <td>생년 월일: {birth}</td> */}
                 </tr>
             </table>
+            <button onClick={handleModal}>수정</button>
         </div>
     );
 }
