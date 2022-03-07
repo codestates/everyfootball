@@ -17,39 +17,8 @@ module.exports = async (req, res) => {
                     where: { 
                         userid: data.userid
                     },
-                });
-
-        const lastmatch = await playerinmatches.findAll({
-            limit : 10,
-            where : {
-                userid: data.userid}
-        })
-
-        for (let i =0; i < lastmatch.length; i++){
-            let target = lastmatch[i]
-
-            const time = await matches.findOne({
-                where : {
-                    matchid : target.matchid
-                },attributes : ['time']})
-
-            const score = await matches.findOne({
-                where : {
-                    matchid : target.matchid
-                },attributes : ['score']})
-
-            const payload = await {
-                time : time.dataValues.time,
-                score : score.dataValues.score,
-                goal : target.goal,
-                assist : target.assist,
-                win : target.win,
-            }
-            matchlist.push(payload)
-        }
-
-        console.log(matchlist)
-        res.status(200).json({data: {userInfo}, last10match : matchlist})
+                })
+                .then(res.status(200).json({message : "logout done"}))
 
 
     }else{
