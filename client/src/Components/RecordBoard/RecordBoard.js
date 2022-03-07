@@ -15,10 +15,10 @@ export default function RecordBoard () {
   
   return (
     <div>
-      {/* <Header /> */}
+      <Header />
       <Rank />
       <Board />
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }

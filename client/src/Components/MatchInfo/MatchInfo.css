@@ -1,13 +1,3 @@
-html,
-body {
-  padding: 0;
-  margin-left: 10em;
-  margin-right: 10em;
-  width: 80%;
-  height: 80%;
-  margin-top: 5em;
-}
-
 .stadium {
   border:1px solid black;
   width: 100%;

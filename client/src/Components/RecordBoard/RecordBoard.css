@@ -1,15 +1,9 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-size: 13px
-}
-
 .totalRanking {
   border:1px solid black;
   width: 100%;
-  height: 20em;
+  height: 22rem;
   padding-top: 2rem;
+  margin-bottom: 10rem;
 }
 
 .totalTopBox {

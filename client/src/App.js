@@ -3,8 +3,8 @@ import "./App.css";
 import { Route, Switch, BrowserRouter } from "react-router-dom";
 import Mainpage from "./Components/Mainpage/Mainpage";
 import Signup from "./Components/Signup/Signup";
-import RecordBoard from "./Components/RecordBoardPage/RecordBoard";
-import MatchInfo from "./Components/MatchInfoPage/MatchInfo";
+import RecordBoard from "./Components/RecordBoard/RecordBoard";
+import MatchInfo from "./Components/MatchInfo/MatchInfo";
 import Login from "../src/Pages/Login";
 import Userinfo from "./Pages/Userinfo";
 
