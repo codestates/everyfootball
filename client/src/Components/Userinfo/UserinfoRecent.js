@@ -4,15 +4,16 @@ import axios from "axios";
 function UserinfoRecent({ name, date, myscore, score, goal, assist }) {
     const accessToken = localStorage.getItem("accessToken");
     const [userinfo, setUserinfo] = useState("");
-
+    console.log("token", accessToken);
     const userinfoRecentHandler = () => {
         if (!accessToken) {
             return;
         } else {
             axios
-                .get(`https://jsonplaceholder.typicode.com/users/`, {
+                .get("http://localhost:4000/user/userinfo", {
                     // headers:{localStorage.getItem("accessToken")}
-                    headers: { "Content-Type": "application/json" },
+                    headers: { authorization: `Bearer ${accessToken}` },
+                    "Content-Type": "application/json",
                 })
                 .then((res) => {
                     console.log(res);
@@ -34,7 +35,7 @@ function UserinfoRecent({ name, date, myscore, score, goal, assist }) {
 
     return (
         <div>
-            <div>
+            <div className="text">
                 <h4>최근 10경기 기록</h4>
                 <table className="userinfo">
                     <tbody>

@@ -1,5 +1,7 @@
-const { users , playerinmatches, matches} = require('../../models');
+//작업중
+const { users } = require('../../models');
 const jwt = require('jsonwebtoken');
+
 
 module.exports = async (req, res) => {
 
@@ -8,6 +10,7 @@ module.exports = async (req, res) => {
     let matchlist = []
 
     if (logininfo){
+        //요청 들러온 토큰 정리 
         const token = logininfo.split(" ")[1]
         const data = jwt.verify(token, "1234")
         const userInfo = await users.findOne({
@@ -22,16 +25,13 @@ module.exports = async (req, res) => {
                 userid: data.userid}
         })
 
-        console.log(lastmatch.length)
-
-        for (let i = 0; i < lastmatch.length; i++){
+        for (let i =0; i < lastmatch.length; i++){
             let target = lastmatch[i]
 
             const time = await matches.findOne({
                 where : {
                     matchid : target.matchid
                 },attributes : ['time']})
-            
 
             const score = await matches.findOne({
                 where : {
@@ -45,11 +45,10 @@ module.exports = async (req, res) => {
                 assist : target.assist,
                 win : target.win,
             }
-
             matchlist.push(payload)
         }
 
-        // console.log(matchlist)
+        console.log(matchlist)
         res.status(200).json({data: {userInfo}, last10match : matchlist})
 
 

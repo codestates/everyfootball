@@ -5,7 +5,7 @@ module.exports = async(req, res) => {
 
     const matches = await matchs.findAll({
         where : {
-            matchend : true
+            matchend : false
         }
     })
 

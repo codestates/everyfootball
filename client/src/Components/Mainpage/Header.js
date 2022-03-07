@@ -3,10 +3,13 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Header.css";
 import logo from "./logo.png";
+import axios from "axios";
 const Header = () => {
     const [isLogin, setIsLogin] = useState(false);
+    // axios() 로그아웃 기능 구현
+    
     return (
-        <header id="header">
+        <header>
             <div>
                 <h1>
                     <Link to="/">

@@ -1,6 +1,6 @@
 
 module.exports = (sequelize, DataTypes) => {
-    const matchs = sequelize.define("matchs",{
+    const matchs = sequelize.define("matches",{
     matchid: {
         type : DataTypes.INTEGER,
         autoIncrement: true,
@@ -12,11 +12,17 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
 
     },
-    player: {
+    maxplayer: {
         type : DataTypes.STRING,
         allowNull: false,
-
     },
+
+    nowplayer : {
+        type : DataTypes.STRING,
+        allowNull: false,
+    },
+
+
     location : {
         type : DataTypes.STRING,
         allowNull: false,
@@ -32,10 +38,13 @@ module.exports = (sequelize, DataTypes) => {
     },
 
     matchend : {
-        type: DataTypes.BOOLEAN,
-        defaultValue: false,
-        allowNull: false
-    }
+        type : DataTypes.BOOLEAN,
+        allowNull: false,
+    },
+    
+    createdAt: {
+        type: DataTypes.DATE
+    }   
 })
 
 return matchs;
