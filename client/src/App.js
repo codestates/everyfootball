@@ -10,6 +10,7 @@ import Userinfo from "./Pages/Userinfo";
 import Footer from "./Components/Mainpage/Footer";
 import Header from "./Components/Mainpage/Header";
 import Changeinfo from "./Pages/Changeinfo";
+import FAQ from "./Components/Mainpage/FAQ";
 import axios from "axios";
 
 function App() {
@@ -32,6 +33,9 @@ function App() {
                     </Route>
                     <Route path="/recordboard">
                         <RecordBoard />
+                    </Route>
+                    <Route path="/faq">
+                        <FAQ />
                     </Route>
                     <Route path="/matchinfo">
                         <MatchInfo matchInfoData={matchInfoData} />

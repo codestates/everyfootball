@@ -7,6 +7,7 @@
   font-family: "NanumSquareRound";
   font-weight: 700;
   text-align: left;
+  transform: translateY(15%);
 }
 #signup-form > div {
     margin: 15px;
