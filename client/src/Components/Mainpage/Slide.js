@@ -3,7 +3,7 @@ import "./Slide.css";
 const Slide = () => {
     return (
         <div class="slidebox">
-            <input type="radio" name="slide" id="slide01" checked />
+            <input type="radio" name="slide" id="slide01" />
             <input type="radio" name="slide" id="slide02" />
             <input type="radio" name="slide" id="slide03" />
             <ul class="slidelist">
