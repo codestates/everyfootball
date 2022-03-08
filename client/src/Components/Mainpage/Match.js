@@ -2,6 +2,7 @@ import react from "react";
 import "./Match.css";
 import { Link } from "react-router-dom";
 const Match = ({ matchData, postMatchInfo }) => {
+    console.log(matchData);
     return (
         <div class="match-li">
             <a class="match-link">

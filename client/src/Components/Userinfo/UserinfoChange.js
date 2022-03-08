@@ -52,10 +52,6 @@ const UserinfoChange = () => {
     return (
         <div className="wrap">
             <div className="login">
-                {/* <div class="login_sns">
-<li><Link to=""><i class="fab fa-kakaotalk"></i></Link></li>
-<li><Link to=""><i class="fab fa-kakaotalk"></i></Link></li>
-</div> */}
                 <div className="login_id">
                     <h4>아이디</h4>
                     <input type="text" placeholder="아이디" name="input_id" onChange={handleInputValue("userid")} />
