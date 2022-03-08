@@ -1,0 +1,74 @@
+.stadiumImage {
+  width: 100%;
+  height: 85%;
+}
+
+.info {
+  border:1px solid gainsboro;;
+  margin-top: 3em;
+  margin-left: 6rem;
+  margin-right: 10rem;
+  width: 85%;
+  height: 50%;
+}
+
+.stadiumInfo {
+  width: 100%;
+  height: 35em;
+  margin-top: 2rem;
+  font-size: 1.5rem;
+}
+
+.totalPlayer {
+  border:1px solid black;
+  width: 100%;
+  height: 26em;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.playerList {
+  border:1px solid black;
+  margin-left: 3rem;
+  margin-bottom: 2rem;
+  width: 45%;
+  height: 6rem;
+  float: left;
+} 
+
+
+.infoBox {
+  border:1px solid black;
+  width: 100%;
+  height: 3rem;
+}
+
+.pInfo {
+  border:1px solid black;
+  margin-top: 0.5rem;
+  margin-left: 1rem;
+  width: 20%;
+  height: 2rem;
+  float: left;
+}
+
+.stadiumLocation {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+}
+
+.stadiumTitle {
+  font-size: 50%;
+}
+
+.caution {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.cautionText {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+
+}
