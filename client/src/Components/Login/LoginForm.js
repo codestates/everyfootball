@@ -4,7 +4,7 @@ import axios from "axios";
 
 import "./LoginForm.css";
 
-const LoginForm = ({ setIsLogin }) => {
+const LoginForm = () => {
     const [loginInfo, setLoginInfo] = useState({
         userid: "",
         password: "",
@@ -36,13 +36,12 @@ const LoginForm = ({ setIsLogin }) => {
             .then((res) => {
                 console.log(res);
                 console.log(res.data.data.accessToken);
-                localStorage.setItem("accessToken", res.data.data.accessToken);
+                // localStorage.setItem("accessToken", res.data.data.accessToken);
                 console.log("성공");
                 if (res.data.data.accessToken) {
                     localStorage.setItem("accessToken", res.data.data.accessToken);
                     console.log("======================", "로그인 성공");
                     console.log(localStorage);
-                    setIsLogin(true);
                 }
                 // 작업 완료 되면 페이지 이동(새로고침)
                 // document.location.href = "/";
