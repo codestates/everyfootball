@@ -7,8 +7,8 @@ const Match = ({ matchData, postMatchInfo }) => {
             <a class="match-link">
                 <div class="match-time">{matchData.time}</div>
                 <div class="match-info">
-                    <h3>{matchData.location}}</h3>
-                    <span>{matchData.matchgender}} </span>
+                    <h3>{matchData.location}</h3>
+                    <span>{matchData.matchgender} </span>
                     <span>6vs6 </span>
                     <span>모든레벨</span>
                 </div>

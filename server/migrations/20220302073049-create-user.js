@@ -14,11 +14,20 @@ module.exports = {
       fullname: {
         type: Sequelize.STRING,
       },
+      address: {
+        type: Sequelize.STRING,
+      },
       gender: {
+        type: Sequelize.STRING,
+      },
+      phonenum: {
         type: Sequelize.STRING,
       },
       createdAt: {
         type: Sequelize.DATE,
+      },
+      updatedAt: {
+        type: Sequelize.STRING,
       },
       location: {
         type: Sequelize.STRING,
@@ -27,6 +36,9 @@ module.exports = {
         type: Sequelize.STRING,
       },
       totalgoal: {
+        type: Sequelize.STRING,
+      },
+      total: {
         type: Sequelize.STRING,
       },
       totalshooting: {
@@ -44,10 +56,18 @@ module.exports = {
       totalmatch: {
         type: Sequelize.STRING,
       },
+      totalPoint: {
+        type: Sequelize.STRING,
+      },
       penalty: {
         type: Sequelize.STRING,
       },
-
+      preferredtime: {
+        type: Sequelize.STRING,
+      },
+      preferredloca: {
+        type: Sequelize.STRING,
+      },
       admin: {
         type: Sequelize.STRING,
       },
