@@ -3,6 +3,7 @@
   padding: 35px;
   border-bottom : solid 1px gainsboro;
   margin: 0 auto;
+  transform: translateY(120%);
 }
 
 .match-link {
