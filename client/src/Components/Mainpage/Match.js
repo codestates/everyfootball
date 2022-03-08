@@ -1,7 +1,7 @@
 import react from "react";
 import "./Match.css";
 import { Link } from "react-router-dom";
-const Match = ({ matchData }) => {
+const Match = ({ matchData, postMatchInfo }) => {
     return (
         <div class="match-li">
             <a class="match-link">
@@ -12,7 +12,7 @@ const Match = ({ matchData }) => {
                     <span>6vs6 </span>
                     <span>모든레벨</span>
                 </div>
-                <Link to="matchinfo">
+                <Link to="matchinfo" onClick={() => postMatchInfo(matchData.matchid)}>
                     <div class="match-status">마감</div>
                 </Link>
             </a>

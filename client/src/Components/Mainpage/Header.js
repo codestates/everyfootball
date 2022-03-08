@@ -5,14 +5,13 @@ import "./Header.css";
 import logo from "./logo.png";
 import axios from "axios";
 const Header = () => {
-    const [isLogin, setIsLogin] = useState(false);
-
     // axios() 로그아웃 기능 구현
     const isLogOut = () => {
         axios
             .get("http://localhost:4000/user/logout", { withCredentials: true })
             .then((res) => {
                 localStorage.removeItem("accessToken");
+                localStorage.removeItem("fullname");
                 window.location.replace("/");
             })
             .catch((err) => {
@@ -55,7 +54,7 @@ const Header = () => {
                 {localStorage.getItem("accessToken") ? (
                     <ul class="spot">
                         <li>
-                            <a>강호중님</a>
+                            <a>{localStorage.getItem("fullname")} 님</a>
                         </li>
                         <li>
                             <Link to="/" style={{ textDecoration: "none" }} onClick={isLogOut}>
