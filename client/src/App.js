@@ -20,13 +20,14 @@ function App() {
             setMatchInfoData(res.data.data);
         });
     };
+
     return (
         <BrowserRouter>
             <Header />
             <div className="App">
                 <Switch>
                     <Route exact path="/">
-                        <Mainpage postMatchInfo={postMatchInfo} />
+                        <Mainpage />
                     </Route>
                     <Route path="/signup">
                         <Signup />
@@ -38,7 +39,7 @@ function App() {
                         <FAQ />
                     </Route>
                     <Route path="/matchinfo">
-                        <MatchInfo matchInfoData={matchInfoData} />
+                        <MatchInfo />
                     </Route>
                     <Route path="/login">
                         <Login />

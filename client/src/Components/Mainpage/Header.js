@@ -23,13 +23,7 @@ const Header = () => {
             <div>
                 <h1>
                     <Link to="/">
-                        <img
-                            src={logo}
-                            alt="everyfootball"
-                            onClick={() => {
-                                console.log(console.log());
-                            }}
-                        />
+                        <img src={logo} alt="everyfootball" />
                     </Link>
                 </h1>
                 <nav>

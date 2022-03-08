@@ -8,8 +8,7 @@ import "./MatchInfo.css";
 
 //axios.defaults.withCredentials = true;
 
-export default function MatchInfo({ matchInfoData }) {
-    console.log(matchInfoData);
+export default function MatchInfo() {
     return (
         <div>
             <StadiumImage />

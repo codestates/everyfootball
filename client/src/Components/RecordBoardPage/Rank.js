@@ -1,41 +1,38 @@
-import React, { useState } from 'react';
-import Ranklist from './Ranklist'
-// import { Link } from 'react-router-dom';
-// import axios from 'axios';
+import react from "react";
+import "./Rank.css";
+import topscore from "./topscore.png";
+import assistant from "./assistant.png";
+import point from "./mostpoint.png";
 
-//axios.defaults.withCredentials = true;
-
-export default function Rank () {
-
-    const dummyData = [
-        {
-            award: '득점왕',
-            name : '김xx',
-            goal : 12
-        },
-        {
-            award: '도움왕',
-            name : '정xx',
-            goal : 13
-        },
-        {
-            award: '최다 공격 포인트',
-            name : '진xx',
-            goal : 15
-        },
-    ]
-
-  
-  return (
-    <div>
-       <div className='totalRanking'>
-          주요 부문 랭킹
-           <div className='totalTopBox'>
-                {dummyData.map((el, i) => {
-                    return <Ranklist key={i} award={el.award} name={el.name} goal={el.goal}/>
-                })}
-           </div>
-       </div>
-    </div>
-  );
+export default function Rank({ maxusers }) {
+    return (
+        <div>
+            <div className="totalTopBox">
+                <div className="rank-greatest">
+                    <div>
+                        <h3>에브리풋볼 득점왕</h3>
+                    </div>
+                    <img className="rank-img" src={topscore} alt="topsore"></img>
+                    <div>{`${maxusers.mostgoal.fullname} (${maxusers.mostgoal.userid})`}</div>
+                    <div>{`${maxusers.mostgoal.goal} 골`}</div>
+                </div>
+                <div className="rank-greatest">
+                    <div>
+                        <h3>에브리풋볼 도움왕</h3>
+                    </div>
+                    <img className="rank-img" src={assistant} alt="topassist"></img>
+                    <div>{`${maxusers.mostassist.fullname} (${maxusers.mostassist.userid})`}</div>
+                    <div>{`${maxusers.mostassist.assist} 도움`}</div>
+                </div>
+                <div className="rank-greatest">
+                    <div>
+                        <h3>에브리풋볼 최고포인트</h3>
+                    </div>
+                    <img className="rank-img" src={point} alt="toppoint"></img>
+                    <div>{`${maxusers.mostpoint.fullname} (${maxusers.mostpoint.userid})`}</div>
+                    <div>{`${maxusers.mostpoint.point} 포인트`}</div>
+                </div>
+            </div>
+        </div>
+    );
 }
