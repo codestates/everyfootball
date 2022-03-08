@@ -6,7 +6,7 @@ const userDelete = ({ setLogin }) => {
     const accessToken = localStorage.getItem("accessToken");
 
     axios
-        .get("http://localhost:4000/user/signout", {
+        .delete("http://localhost:4000/user/signout", {
             headers: { authorization: `Bearer ${accessToken}` },
             "Content-Type": "application/json",
         })

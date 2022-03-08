@@ -8,6 +8,8 @@ import Login from "./Pages/Login";
 import Userinfo from "./Pages/Userinfo";
 import Footer from "./Components/Mainpage/Footer";
 import Header from "./Components/Mainpage/Header";
+import Changeinfo from "./Pages/Changeinfo";
+
 function App() {
     return (
         <BrowserRouter>
@@ -31,6 +33,9 @@ function App() {
                     </Route>
                     <Route path="/userinfo">
                         <Userinfo />
+                    </Route>
+                    <Route path="/changeinfo">
+                        <Changeinfo />
                     </Route>
                 </Switch>
             </div>
