@@ -1,8 +1,8 @@
-const { sequelize ,users, playerinmatches} = require('../../models');
+const { sequelize ,users, playerinmatches, matches} = require('../../models');
 const jwt = require('jsonwebtoken');
 const userinfo = require('../user/userinfo');
 
-module.exports = (req, res) => {
+module.exports = async (req, res) => {
     console.log("joinmatch!" + req.query.matchid)
     const logininfo = req.headers.authorization;
 
@@ -34,13 +34,24 @@ module.exports = (req, res) => {
                         penalty : userInfo.penalty,
                     }
                     
-                    playerinmatches.create({
-                            userid : payload.userid,
-                            matchid : payload.matchid,
-                            goal : 0
-                    }).then(
+                await playerinmatches.create({
+                        userid : payload.userid,
+                        matchid : payload.matchid,
+                        goal : 0
+                    })
+
+                const nowplayer = await playerinmatches.findAll({
+                        where : {
+                            matchid : payload.matchid
+                            }
+                        }).then((res)=>{
+                            matches.update({nowplayer : res.length},{
+                            where : {
+                                matchid : payload.matchid
+                            }
+                        })}).then(
                         res.status(200).json({
-                            message : "Room joined!",
+                            message : `${payload.userid} has joined mathch ${payload.matchid}`,
                             data : payload
                         }))
             }else{

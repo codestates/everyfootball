@@ -17,11 +17,11 @@ module.exports = {
         matchid : i,
         time: `일시 2022.3.${i%20} 시간 ${i%23}:00`,
         maxplayer : 10,
-        nowplayer : 0,
+        nowplayer : 5,
         location : `${location[i%5]}`,
         matchgender : `${gender[i%3]}`,
         score : `${i%5} : ${i%2}`,
-        matchend : i%2===0 ? true : false,
+        matchend : false,
         createdAt: new Date().toISOString().replace(/T/, ' ').replace(/\..+/, ''),
         updatedAt: new Date().toISOString().replace(/T/, ' ').replace(/\..+/, '')
       }
