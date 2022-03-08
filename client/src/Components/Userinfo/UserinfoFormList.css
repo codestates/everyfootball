@@ -1,66 +1,87 @@
+#userinfo-form {
+    width: 700px;
+    margin: 0 auto;
+    transform: translateY(10%);
+}
+.userinfo-content {
+    /* margin: 100px 0; */
+}
+.userinfo-contents {
+    margin: 100px 0;
+}
+
+.userinfo-category {
+    font-size: 20px;
+    padding: 3px 0;
+    width: 200px;
+    text-align: center;
+    background-color: #2a2a2a;
+    color: white;
+    border-radius: 20px;
+    margin: 10px 0;
+    margin-top: 20px;
+}
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Noto Sans KR", sans-serif;
+    font-size: 13px;
 }
 
-#UserinfoFormList {
-    margin: 0 auto;
-    width: 500px;
+.userinfo-table {
+    display: table;
+    width: calc(100% - 2rem);
+    margin-top: 3rem;
+    margin-left: 1rem;
+    border: 1px solid #eee;
 }
-.text {
-    text-align: left;
-    border-radius: 15px 15px 15px 0;
-    border: 3px solid gainsboro;
-    padding: 0.5em 0.6em;
-    color: black;
-    width: 50%;
-    height: 50%;
-    margin: 0 auto;
+
+.row,
+.row-header {
+    display: table-row;
 }
-.userinfo {
-    border-collapse: collapse;
-    border-spacing: 0;
+
+.row-header .col {
+    background-color: #eee;
+    display: table-cell;
+    padding: 0.5rem 1rem;
+    border-right: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+.row-header .column {
+    background-color: white;
+    display: table-cell;
+    padding: 0.5rem 1rem;
+    border-right: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+.editBtn {
+    margin-top: 50px;
     width: 100%;
+}
+.editBtn button {
+    height: 45px;
+    border: solid 1px gainsboro;
     text-align: center;
-    table-layout: auto;
+    padding: 10px;
+    margin: 15px;
+    background-color: #2a2a2a;
+    color: white;
+    cursor: pointer;
+    float: right;
+}
+.deleteBtn {
+    margin-top: 50px;
     width: 100%;
-    table-layout: fixed;
-    width: 50%;
-    height: 50%;
-    margin: 0 auto;
 }
-/* .userinfo th,
-td {
-    text-align: left;
-    padding: 8px;
-    border: 1px solid #ddd;
-} */
-table.userinfo {
-    border-collapse: separate;
-    border-spacing: 1px;
+.deleteBtn button {
+    height: 45px;
+    border: solid 1px gainsboro;
     text-align: center;
-    line-height: 1.5;
-    margin: 20px 10px;
-}
-table.userinfo th {
-    width: 155px;
     padding: 10px;
-    font-weight: bold;
-    vertical-align: top;
-    color: #fff;
-    background: black;
-}
-table.userinfo td {
-    width: 155px;
-    padding: 10px;
-    vertical-align: top;
-    background: linear-gradient(to left, #eee, white);
-}
-.edit {
-    width: 100px;
-    margin: auto;
-    display: block;
+    margin: 15px;
+    background-color: #2a2a2a;
+    color: white;
+    cursor: pointer;
     float: right;
 }

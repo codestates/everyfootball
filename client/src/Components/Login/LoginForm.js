@@ -31,7 +31,7 @@ const LoginForm = () => {
                     userid,
                     password,
                 },
-                { "Content-Type": "application/json", withCredentials: true },
+                { "Content-Type": "application/json" },
             )
             .then((res) => {
                 console.log(res);

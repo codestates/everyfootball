@@ -2,14 +2,12 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import UserinfoRecentList from "./UserinfoRecentList";
 import UserDelete from "./UserDelete";
+import "./UserinfoFormList.css";
+
 function UserinfoRecent() {
     const accessToken = localStorage.getItem("accessToken");
     const [userinfo, setUserinfo] = useState([]);
     console.log("token", accessToken);
-
-    const handleModal = () => {
-        window.location.replace("/changeinfo");
-    };
 
     const userinfoRecentHandler = () => {
         if (!accessToken) {
@@ -37,17 +35,16 @@ function UserinfoRecent() {
     }, []);
 
     return (
-        <div>
-            <div>
-                {/* 최근 10경기 기록 */}
-                <div className="table">
+        <div id="userinfo-form">
+            <div className="userinfo-contents">
+                <div className="userinfo-category">최근 경기 기록</div>
+                <div className="userinfo-table">
                     <div className="row-header">
                         <div className="col">경기 날짜</div>
                         <div className="col">스코어</div>
                         <div className="col">득점</div>
                         <div className="col">도움</div>
                     </div>
-
                     {userinfo &&
                         userinfo.map((el, i) => {
                             return (
@@ -62,10 +59,7 @@ function UserinfoRecent() {
                             );
                         })}
                 </div>
-                <div className="submit">
-                    <button onClick={handleModal}>개인 정보 수정</button>
-                    <UserDelete />
-                </div>
+                <UserDelete />
             </div>
         </div>
     );

@@ -4,7 +4,13 @@ import "./UserDelete.css";
 
 const userDelete = () => {
     const accessToken = localStorage.getItem("accessToken");
-
+    const deleteModal = () => {
+        if (window.confirm("정말 회원탈퇴하시겠습니까?")) {
+            deleteHandler();
+        } else {
+            console.log("회원탈퇴 취소하기");
+        }
+    };
     const deleteHandler = () => {
         if (!accessToken) {
             return;
@@ -18,7 +24,7 @@ const userDelete = () => {
                     console.log("탈퇴");
                     localStorage.removeItem("accessToken");
                     localStorage.removeItem("fullname");
-                    alert("회원탈퇴가 완료되었습니다.");
+                    alert("그동안 이용해 주셔서 감사합니다.");
                     window.location.replace("/");
                 })
                 .catch((err) => {
@@ -29,8 +35,8 @@ const userDelete = () => {
     };
 
     return (
-        <div className="submit">
-            <button onClick={deleteHandler}>회원 탈퇴</button>
+        <div className="deleteBtn">
+            <button onClick={deleteModal}>회원 탈퇴</button>
         </div>
     );
 };
