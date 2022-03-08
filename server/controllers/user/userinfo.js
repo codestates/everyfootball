@@ -4,7 +4,6 @@ const checking = require('./checktoken')
 
 module.exports = async (req, res) => {
 
-    checking(req, res)
 
     const logininfo = req.headers.authorization;
     let matchlist = []
