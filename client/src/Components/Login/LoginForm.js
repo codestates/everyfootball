@@ -36,7 +36,8 @@ const LoginForm = () => {
             .then((res) => {
                 console.log(res);
                 console.log(res.data.data.accessToken);
-                // localStorage.setItem("accessToken", res.data.data.accessToken);
+                localStorage.setItem("accessToken", res.data.data.accessToken);
+                localStorage.setItem("fullname", res.data.data.fullname);
                 console.log("성공");
                 if (res.data.data.accessToken) {
                     localStorage.setItem("accessToken", res.data.data.accessToken);

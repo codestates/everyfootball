@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import Match from "./Match";
 import "./Mainpage.css";
-
-const Mainpage = () => {
+import Slide from "./Slide";
+const Mainpage = ({ postMatchInfo }) => {
     const [matchDatas, setMatchDatas] = useState([]);
     useEffect(() => {
         fetch("http://localhost:4000/match/showmatchlist")
@@ -13,8 +13,9 @@ const Mainpage = () => {
     }, []);
     return (
         <div id="list-main">
+            <Slide />
             {matchDatas.map((el) => {
-                return <Match matchData={el} key={el.matchid} />;
+                return <Match matchData={el} key={el.matchid} postMatchInfo={postMatchInfo} />;
             })}
         </div>
     );
