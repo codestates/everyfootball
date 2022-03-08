@@ -1,5 +1,5 @@
 import "./App.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Route, Switch, BrowserRouter } from "react-router-dom";
 import Mainpage from "./Components/Mainpage/Mainpage";
 import Signup from "./Components/Signup/Signup";
@@ -14,12 +14,294 @@ import FAQ from "./Components/Mainpage/FAQ";
 import axios from "axios";
 
 function App() {
-    const [matchInfoData, setMatchInfoData] = useState({});
+    const [matchInfoData, setMatchInfoData] = useState({
+        groundinfo: {
+            groundpayload: {
+                groundid: "",
+                img: "",
+                location: "",
+                name: "",
+                parking: "",
+                shower: "",
+                toilet: "",
+            },
+        },
+        userinfo: {
+            userinfo: [
+                {
+                    admin: false,
+                    createdAt: "",
+                    fullname: "",
+                    gender: "",
+                    password: "",
+                    penalty: 0,
+                    phonenum: "",
+                    position: "",
+                    preferredloca: null,
+                    preferredtime: null,
+                    totalAssist: 0,
+                    totalGoal: 0,
+                    totalPoint: 0,
+                    totalShooting: 0,
+                    totalWin: 0,
+                    updatedAt: "",
+                    userid: "",
+                    winrate: "",
+                },
+                {
+                    admin: false,
+                    createdAt: "",
+                    fullname: "",
+                    gender: "",
+                    password: "",
+                    penalty: 0,
+                    phonenum: "",
+                    position: "",
+                    preferredloca: null,
+                    preferredtime: null,
+                    totalAssist: 0,
+                    totalGoal: 0,
+                    totalPoint: 0,
+                    totalShooting: 0,
+                    totalWin: 0,
+                    updatedAt: "",
+                    userid: "",
+                    winrate: "",
+                },
+                {
+                    admin: false,
+                    createdAt: "",
+                    fullname: "",
+                    gender: "",
+                    password: "",
+                    penalty: 0,
+                    phonenum: "",
+                    position: "",
+                    preferredloca: null,
+                    preferredtime: null,
+                    totalAssist: 0,
+                    totalGoal: 0,
+                    totalPoint: 0,
+                    totalShooting: 0,
+                    totalWin: 0,
+                    updatedAt: "",
+                    userid: "",
+                    winrate: "",
+                },
+                {
+                    admin: false,
+                    createdAt: "",
+                    fullname: "",
+                    gender: "",
+                    password: "",
+                    penalty: 0,
+                    phonenum: "",
+                    position: "",
+                    preferredloca: null,
+                    preferredtime: null,
+                    totalAssist: 0,
+                    totalGoal: 0,
+                    totalPoint: 0,
+                    totalShooting: 0,
+                    totalWin: 0,
+                    updatedAt: "",
+                    userid: "",
+                    winrate: "",
+                },
+                {
+                    admin: false,
+                    createdAt: "",
+                    fullname: "",
+                    gender: "",
+                    password: "",
+                    penalty: 0,
+                    phonenum: "",
+                    position: "",
+                    preferredloca: null,
+                    preferredtime: null,
+                    totalAssist: 0,
+                    totalGoal: 0,
+                    totalPoint: 0,
+                    totalShooting: 0,
+                    totalWin: 0,
+                    updatedAt: "",
+                    userid: "",
+                    winrate: "",
+                },
+                {
+                    admin: false,
+                    createdAt: "",
+                    fullname: "",
+                    gender: "",
+                    password: "",
+                    penalty: 0,
+                    phonenum: "",
+                    position: "",
+                    preferredloca: null,
+                    preferredtime: null,
+                    totalAssist: 0,
+                    totalGoal: 0,
+                    totalPoint: 0,
+                    totalShooting: 0,
+                    totalWin: 0,
+                    updatedAt: "",
+                    userid: "",
+                    winrate: "",
+                },
+                {
+                    admin: false,
+                    createdAt: "",
+                    fullname: "",
+                    gender: "",
+                    password: "",
+                    penalty: 0,
+                    phonenum: "",
+                    position: "",
+                    preferredloca: null,
+                    preferredtime: null,
+                    totalAssist: 0,
+                    totalGoal: 0,
+                    totalPoint: 0,
+                    totalShooting: 0,
+                    totalWin: 0,
+                    updatedAt: "",
+                    userid: "",
+                    winrate: "",
+                },
+                {
+                    admin: false,
+                    createdAt: "",
+                    fullname: "",
+                    gender: "",
+                    password: "",
+                    penalty: 0,
+                    phonenum: "",
+                    position: "",
+                    preferredloca: null,
+                    preferredtime: null,
+                    totalAssist: 0,
+                    totalGoal: 0,
+                    totalPoint: 0,
+                    totalShooting: 0,
+                    totalWin: 0,
+                    updatedAt: "",
+                    userid: "",
+                    winrate: "",
+                },
+                {
+                    admin: false,
+                    createdAt: "",
+                    fullname: "",
+                    gender: "",
+                    password: "",
+                    penalty: 0,
+                    phonenum: "",
+                    position: "",
+                    preferredloca: null,
+                    preferredtime: null,
+                    totalAssist: 0,
+                    totalGoal: 0,
+                    totalPoint: 0,
+                    totalShooting: 0,
+                    totalWin: 0,
+                    updatedAt: "",
+                    userid: "",
+                    winrate: "",
+                },
+                {
+                    admin: false,
+                    createdAt: "",
+                    fullname: "",
+                    gender: "",
+                    password: "",
+                    penalty: 0,
+                    phonenum: "",
+                    position: "",
+                    preferredloca: null,
+                    preferredtime: null,
+                    totalAssist: 0,
+                    totalGoal: 0,
+                    totalPoint: 0,
+                    totalShooting: 0,
+                    totalWin: 0,
+                    updatedAt: "",
+                    userid: "",
+                    winrate: "",
+                },
+                {
+                    admin: false,
+                    createdAt: "",
+                    fullname: "",
+                    gender: "",
+                    password: "",
+                    penalty: 0,
+                    phonenum: "",
+                    position: "",
+                    preferredloca: null,
+                    preferredtime: null,
+                    totalAssist: 0,
+                    totalGoal: 0,
+                    totalPoint: 0,
+                    totalShooting: 0,
+                    totalWin: 0,
+                    updatedAt: "",
+                    userid: "",
+                    winrate: "",
+                },
+                {
+                    admin: false,
+                    createdAt: "",
+                    fullname: "",
+                    gender: "",
+                    password: "",
+                    penalty: 0,
+                    phonenum: "",
+                    position: "",
+                    preferredloca: null,
+                    preferredtime: null,
+                    totalAssist: 0,
+                    totalGoal: 0,
+                    totalPoint: 0,
+                    totalShooting: 0,
+                    totalWin: 0,
+                    updatedAt: "",
+                    userid: "",
+                    winrate: "",
+                },
+                {
+                    admin: false,
+                    createdAt: "",
+                    fullname: "",
+                    gender: "",
+                    password: "",
+                    penalty: 0,
+                    phonenum: "",
+                    position: "",
+                    preferredloca: null,
+                    preferredtime: null,
+                    totalAssist: 0,
+                    totalGoal: 0,
+                    totalPoint: 0,
+                    totalShooting: 0,
+                    totalWin: 0,
+                    updatedAt: "",
+                    userid: "",
+                    winrate: "",
+                },
+            ],
+        },
+    });
     const postMatchInfo = (matchid) => {
-        axios.get(`http://localhost:4000/match/data/matchid?matchid=${matchid}`).then((res) => {
-            setMatchInfoData(res.data.data);
-        });
+        localStorage.setItem("matchid", matchid);
     };
+
+    useEffect(() => {
+        fetch(`http://localhost:4000/match/data/matchid?matchid=${localStorage.getItem("matchid")}`)
+            .then((res) => res.json())
+            .then((res) => {
+                setMatchInfoData(res.data.data);
+            });
+    }, []);
 
     return (
         <BrowserRouter>
@@ -27,7 +309,7 @@ function App() {
             <div className="App">
                 <Switch>
                     <Route exact path="/">
-                        <Mainpage />
+                        <Mainpage postMatchInfo={postMatchInfo} />
                     </Route>
                     <Route path="/signup">
                         <Signup />
@@ -39,7 +321,7 @@ function App() {
                         <FAQ />
                     </Route>
                     <Route path="/matchinfo">
-                        <MatchInfo />
+                        <MatchInfo matchInfoData={matchInfoData} />
                     </Route>
                     <Route path="/login">
                         <Login />

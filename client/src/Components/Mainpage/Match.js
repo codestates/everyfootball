@@ -2,7 +2,6 @@ import react from "react";
 import "./Match.css";
 import { Link } from "react-router-dom";
 const Match = ({ matchData, postMatchInfo }) => {
-    console.log(matchData);
     return (
         <div class="match-li">
             <a class="match-link">
@@ -12,7 +11,7 @@ const Match = ({ matchData, postMatchInfo }) => {
                     <span>{matchData.matchgender} </span>
                     <span>{`${matchData.maxplayer / 2}vs${matchData.maxplayer / 2}`} </span>
                 </div>
-                <Link to="matchinfo" onClick={() => postMatchInfo(matchData.matchid)}>
+                <Link to="/matchinfo" onClick={() => postMatchInfo(matchData.matchid)}>
                     <div
                         class={
                             Number(matchData.maxplayer) - Number(matchData.nowplayer) === 0
