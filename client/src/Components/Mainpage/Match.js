@@ -9,11 +9,20 @@ const Match = ({ matchData, postMatchInfo }) => {
                 <div class="match-info">
                     <h3>{matchData.location}</h3>
                     <span>{matchData.matchgender} </span>
-                    <span>6vs6 </span>
-                    <span>모든레벨</span>
+                    <span>{`${matchData.maxplayer / 2}vs${matchData.maxplayer / 2}`} </span>
                 </div>
                 <Link to="matchinfo" onClick={() => postMatchInfo(matchData.matchid)}>
-                    <div class="match-status">마감</div>
+                    <div
+                        class={
+                            Number(matchData.maxplayer) - Number(matchData.nowplayer) === 0
+                                ? "match-status closed"
+                                : "match-status"
+                        }
+                    >
+                        {Number(matchData.maxplayer) - Number(matchData.nowplayer) === 0
+                            ? "마감"
+                            : `${Number(matchData.maxplayer) - Number(matchData.nowplayer)} 명 남음`}
+                    </div>
                 </Link>
             </a>
         </div>

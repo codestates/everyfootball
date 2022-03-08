@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Match from "./Match";
 import "./Mainpage.css";
-
+import Slide from "./Slide";
 const Mainpage = ({ postMatchInfo }) => {
     const [matchDatas, setMatchDatas] = useState([]);
     useEffect(() => {
@@ -13,6 +13,7 @@ const Mainpage = ({ postMatchInfo }) => {
     }, []);
     return (
         <div id="list-main">
+            <Slide />
             {matchDatas.map((el) => {
                 return <Match matchData={el} key={el.matchid} postMatchInfo={postMatchInfo} />;
             })}

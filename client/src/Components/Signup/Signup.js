@@ -245,13 +245,13 @@ function Signup() {
                 <div>
                     <div>선호경기시간</div>
                     <div class="inputbox">
-                        <input type="text" onChange={(e) => setMatchTime(e.target.value)} />
+                        <input type="date" onChange={(e) => setMatchTime(e.target.value)} />
                     </div>
                 </div>
                 <div>
                     <div>선호경기위치</div>
                     <div class="inputbox">
-                        <input type="text" onChange={(e) => setMatchLocation(e.target.value)} />
+                        <input type="input" onChange={(e) => setMatchLocation(e.target.value)} />
                     </div>
                 </div>
                 <div id="signup-button" onClick={submit}>

@@ -3,7 +3,7 @@
   padding: 35px;
   border-bottom : solid 1px gainsboro;
   margin: 0 auto;
-  transform: translateY(120%);
+  transform: translateY(90%);
 }
 
 .match-link {
@@ -30,8 +30,13 @@
   width:100px;
   height:40px;
   border-radius: 20px;
-  background-color: whitesmoke;
-  color:gainsboro;
+  background-color: dodgerblue;
+  color:white;
   line-height: 35px;
+}
+
+.closed {
+  background-color: gainsboro;
+  color: white;
 }
 
