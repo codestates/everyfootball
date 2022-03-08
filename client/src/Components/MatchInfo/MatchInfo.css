@@ -1,41 +1,23 @@
-/* html,
-body {
-  padding: 0;
-  margin-left: 10em;
-  margin-right: 10em;
-  width: 100%; 
-  height: 100%;
-  margin-top: 5em;
-} 
-html, body, * 셀렉터는 최대한 피해주세요 다른 컴포넌트에 영향이 갑니다.*/ 
-
-.stadium {
-  border:1px solid black;
-  width: 100%;
-  height: 30em;
-  margin-bottom: 3rem;
-}
-
-.info1 {
-  border:1px solid black;
-  margin-top: 3em;
+.stadiumImage {
   width: 100%;
   height: 85%;
 }
 
 .info {
-  border:1px solid black;
+  border:1px solid gainsboro;;
   margin-top: 3em;
-  width: 100%;
-  height: 70%;
+  margin-left: 6rem;
+  margin-right: 10rem;
+  width: 85%;
+  height: 50%;
 }
 
 .stadiumInfo {
-  border:1px solid black;
   width: 100%;
-  height: 15em
+  height: 35em;
+  margin-top: 2rem;
+  font-size: 1.5rem;
 }
-
 
 .totalPlayer {
   border:1px solid black;
@@ -68,4 +50,25 @@ html, body, * 셀렉터는 최대한 피해주세요 다른 컴포넌트에 영�
   width: 20%;
   height: 2rem;
   float: left;
+}
+
+.stadiumLocation {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+}
+
+.stadiumTitle {
+  font-size: 50%;
+}
+
+.caution {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.cautionText {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+
 }
