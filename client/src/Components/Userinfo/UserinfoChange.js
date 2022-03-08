@@ -13,7 +13,7 @@ const UserinfoChange = () => {
         setIsedit({ ...isedit, [key]: e.target.value.toLowerCase() });
     };
 
-    const onClickLogin = () => {
+    const onClickchange = () => {
         const { userid, fullname, position } = isedit;
         if (userid === "") {
             console.log("아이디를 입력하세요");
@@ -53,30 +53,35 @@ const UserinfoChange = () => {
         <div className="wrap">
             <div className="login">
                 <div className="login_id">
-                    <h4>아이디</h4>
-                    <input type="text" placeholder="아이디" name="input_id" onChange={handleInputValue("userid")} />
-                </div>
-                <div className="login_pw">
-                    <h4>이름</h4>
+                    <h4>아이디 체크</h4>
                     <input
                         type="text"
-                        name="input_Password"
-                        placeholder="이름"
+                        placeholder="본인 아이디를 입력해주세요."
+                        name="input_id"
+                        onChange={handleInputValue("userid")}
+                    />
+                </div>
+                <div className="login_pw">
+                    <h4>이름 수정하기</h4>
+                    <input
+                        type="text"
+                        name="input_Name"
+                        placeholder="수정하실 이름을 입력해주세요."
                         onChange={handleInputValue("fullname")}
                     />
                 </div>
                 <div className="login_pw">
-                    <h4>포지션</h4>
+                    <h4>포지션 수정하기</h4>
                     <input
                         type="text"
-                        name="input_Password"
-                        placeholder="포지션"
+                        name="input_Position"
+                        placeholder="수정하실 포지션을 입력해주세요."
                         onChange={handleInputValue("position")}
                     />
                 </div>
 
                 <div className="submit">
-                    <button onClick={onClickLogin}>수정</button>
+                    <button onClick={onClickchange}>수정하기</button>
                 </div>
             </div>
         </div>
