@@ -32,4 +32,3 @@ module.exports = async(req, res) => {
         }).json({ data: { accessToken : access_Token }, message : "ok"})
         }
 }
-
