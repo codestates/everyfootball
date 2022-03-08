@@ -17,7 +17,7 @@ app.use(
   })
 );
 
-
+app.use(cookieParser())
 app.post("/user/login", usercontrollers.login);
 app.post("/user/signup", usercontrollers.signup);
 app.get("/user/signout", usercontrollers.signout);
@@ -32,7 +32,6 @@ app.get("/match/joinmatch/:matchid",matchcontrollers.joinmatch);
 app.get("/match/leavematch/:matchid",matchcontrollers.leavematch);
 app.post("/user/existedid",usercontrollers.existedid);
 app.get("/user/logout", usercontrollers.logout);
-
 app.post("/user/existedid", usercontrollers.existedid)
 
 db.sequelize.sync().then((req) => {
