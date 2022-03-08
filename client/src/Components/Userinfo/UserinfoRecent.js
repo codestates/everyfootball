@@ -1,24 +1,30 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-
+import UserinfoRecentList from "./UserinfoRecentList";
+import UserDelete from "./UserDelete";
 function UserinfoRecent() {
     const accessToken = localStorage.getItem("accessToken");
-    const [userinfo, setUserinfo] = useState("");
+    const [userinfo, setUserinfo] = useState([]);
     console.log("token", accessToken);
+
+    const handleModal = () => {
+        window.location.replace("/changeinfo");
+    };
+
     const userinfoRecentHandler = () => {
         if (!accessToken) {
             return;
         } else {
             axios
                 .get("http://localhost:4000/user/userinfo", {
-                    // headers:{localStorage.getItem("accessToken")}
                     headers: { authorization: `Bearer ${accessToken}` },
                     "Content-Type": "application/json",
                 })
                 .then((res) => {
-                    console.log(res);
-                    console.log(res.data);
-                    setUserinfo(res);
+                    // console.log(res);
+                    console.log(res.data.last10match);
+                    // console.log(res.data.last10match[0].time);
+                    setUserinfo(res.data.last10match);
                     console.log("최근경기기록 성공");
                 })
                 .catch((err) => {
@@ -32,18 +38,34 @@ function UserinfoRecent() {
 
     return (
         <div>
-            <div className="text">
-                <h4>최근 경기 기록</h4>
-                <table className="userinfo">
-                    <tbody>
-                        <tr>
-                            <td className="text">경기 날짜: {}</td>
-                            <td className="text">스코어</td>
-                            <td className="text">득점: {userinfo && userinfo.data.data.userInfo.totalGoal}</td>
-                            <td className="text">어시스트</td>
-                        </tr>
-                    </tbody>
-                </table>
+            <div>
+                {/* 최근 10경기 기록 */}
+                <div className="table">
+                    <div className="row-header">
+                        <div className="col">경기 날짜</div>
+                        <div className="col">스코어</div>
+                        <div className="col">득점</div>
+                        <div className="col">도움</div>
+                    </div>
+
+                    {userinfo &&
+                        userinfo.map((el, i) => {
+                            return (
+                                <UserinfoRecentList
+                                    time={el.time}
+                                    score={el.score}
+                                    goal={el.goal}
+                                    assist={el.assist}
+                                    win={el.win}
+                                    key={i}
+                                />
+                            );
+                        })}
+                </div>
+                <div className="submit">
+                    <button onClick={handleModal}>개인 정보 수정</button>
+                    <UserDelete />
+                </div>
             </div>
         </div>
     );

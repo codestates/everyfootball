@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-
+import "./UserinfoFormList.css";
 function UserinfoEdit() {
     const accessToken = localStorage.getItem("accessToken");
     const [userinfo, setUserinfo] = useState("");
@@ -33,20 +33,24 @@ function UserinfoEdit() {
     }, []);
 
     return (
-        <div className="text">
-            <h4>개인정보</h4>
-            <table className="userinfo">
-                <tr>
-                    <td className="text">이름: {userinfo && userinfo.data.data.userInfo.fullname}</td>
-                    <td className="text">아이디: {userinfo && userinfo.data.data.userInfo.userid}</td>
-                    {/* <td>선호 구장 위치: {preferLocation}</td>
-                    <td>선호 경기 시간: {preferTime} 시</td> */}
-                    <td className="text">포지션: {userinfo && userinfo.data.data.userInfo.position}</td>
-                    <td className="text">성별: {userinfo && userinfo.data.data.userInfo.gender}</td>
-                    {/* <td>생년 월일: {birth}</td> */}
-                </tr>
-            </table>
-            <button onClick={handleModal}>수정</button>
+        <div className="totalplayer">
+            <div className="table">
+                {/* <h4>개인정보</h4> */}
+                <div className="row-header">
+                    <div className="col">이름</div>
+                    <div className="col">아이디</div>
+                    <div className="col">포지션</div>
+                    <div className="col">성별</div>
+                    {/* <div className="col">선호 구장 위치</div>
+                    <div className="col">선호 경기 시간</div> */}
+                </div>
+                <div className="col">{userinfo && userinfo.data.data.userInfo.fullname}</div>
+                <div className="col">{userinfo && userinfo.data.data.userInfo.userid}</div>
+                <div className="col">{userinfo && userinfo.data.data.userInfo.position}</div>
+                <div className="col">{userinfo && userinfo.data.data.userInfo.gender}</div>
+                {/* <div className="col">{userinfo && userinfo.data.datapreferLocation}</div>
+                <div className="col">{userinfo && userinfo.data.preferTime}</div> */}
+            </div>
         </div>
     );
 }

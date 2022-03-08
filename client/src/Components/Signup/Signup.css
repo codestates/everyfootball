@@ -7,6 +7,7 @@
   font-family: "NanumSquareRound";
   font-weight: 700;
   text-align: left;
+  transform: translateY(15%);
 }
 #signup-form > div {
     margin: 15px;
@@ -49,7 +50,7 @@
 }
 
 .inputbox > input {
- padding: 13px;
+ padding: 10px;
  width: 395px;
  border-style: none;
 }

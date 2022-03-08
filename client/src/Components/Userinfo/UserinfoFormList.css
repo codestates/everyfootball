@@ -58,3 +58,9 @@ table.userinfo td {
     vertical-align: top;
     background: linear-gradient(to left, #eee, white);
 }
+.edit {
+    width: 100px;
+    margin: auto;
+    display: block;
+    float: right;
+}
