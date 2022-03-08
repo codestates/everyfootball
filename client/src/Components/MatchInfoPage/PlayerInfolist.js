@@ -4,20 +4,23 @@ import React, { useState } from 'react';
 
 //axios.defaults.withCredentials = true;
 
-export default function PlayerInfolist ({gender,level,position,penalty}) {
+export default function PlayerInfolist ({gender, position, penalty, goal, shoot, assist}) {
   
-  
+
   return (
     <div>
       <div className='playerList'>
-        <div className='player'>선수정보</div>
-          <div className='infoBox'>
-              <div className='pInfo'>{gender}</div>
-              <div className='pInfo'>{level}</div>
-              <div className='pInfo'>{position}</div>
-              <div className='pInfo'>{penalty}</div>
-          </div>    
-
+        <div className='infoBox'>
+            <div className='pInfo'>{gender}</div>
+            <div className='pInfo'>{position}</div>
+            <div className='pInfo'>{penalty}</div>
+        </div>   
+        {/* 관리자만 보이게 */}
+        <div className='infoBox'>
+            <div className='pInfo'>{goal}</div>
+            <div className='pInfo'>{shoot}</div>
+            <div className='pInfo'>{assist}</div>
+        </div>   
       </div>
     </div>
   );

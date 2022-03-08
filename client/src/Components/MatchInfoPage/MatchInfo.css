@@ -54,16 +54,9 @@ html, body, * 셀렉터는 최대한 피해주세요 다른 컴포넌트에 영�
   float: left;
 } 
 
-.player {
-  border:1px solid black;
-  margin-top: 0.5rem;
-  width: 40%;
-  height: 2rem;
-}
 
 .infoBox {
   border:1px solid black;
-  margin-top: 0.5rem;
   width: 100%;
   height: 3rem;
 }
