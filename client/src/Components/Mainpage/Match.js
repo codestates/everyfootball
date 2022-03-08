@@ -1,8 +1,9 @@
 import react from "react";
 import "./Match.css";
 import { Link } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 const Match = ({ matchData, postMatchInfo }) => {
-    console.log(matchData);
+    const history = useHistory();
     return (
         <div class="match-li">
             <a class="match-link">
@@ -25,6 +26,12 @@ const Match = ({ matchData, postMatchInfo }) => {
                             : `${Number(matchData.maxplayer) - Number(matchData.nowplayer)} 명 남음`}
                     </div>
                 </Link>
+                <span>{matchData.matchgender}</span>
+                <span>6vs6 </span>
+                <span>모든레벨</span>
+                <div class="match-status" onClick={() => history.push("/matchinfo", { state: matchData })}>
+                    마감
+                </div>
             </a>
         </div>
     );
