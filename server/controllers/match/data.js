@@ -44,6 +44,7 @@ module.exports = async (req, res) => {
         userarr.push(el.dataValues.userid)
     }); 
     
+
 // 유저 데이블에서 각 유저 정보 뽑아서 페이로드로 던지기
     for (let i = 0; i < userarr.length; i++) {
         eachuser = await users.findOne({
@@ -55,7 +56,6 @@ module.exports = async (req, res) => {
         userinfo.push(eachuser)
     }
 
-    console.log(userinfo)
 
     res.status(200).json({data : {
         groundinfo : {groundpayload},

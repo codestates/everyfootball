@@ -1,0 +1,14 @@
+.totalTopBox {
+  display: flex;
+}
+
+.rank-greatest{
+  margin: 0 auto;
+  width: 250px;
+  height:300px;
+}
+
+.rank-img {
+  width:200px;
+  height:200px;
+}

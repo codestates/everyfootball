@@ -1,4 +1,5 @@
 import "./App.css";
+import { useEffect, useState } from "react";
 import { Route, Switch, BrowserRouter } from "react-router-dom";
 import Mainpage from "./Components/Mainpage/Mainpage";
 import Signup from "./Components/Signup/Signup";
@@ -9,15 +10,21 @@ import Userinfo from "./Pages/Userinfo";
 import Footer from "./Components/Mainpage/Footer";
 import Header from "./Components/Mainpage/Header";
 import Changeinfo from "./Pages/Changeinfo";
+import FAQ from "./Components/Mainpage/FAQ";
+import axios from "axios";
 
 function App() {
+    const postMatchInfo = (matchid) => {
+        localStorage.setItem("matchid", matchid);
+    };
+
     return (
         <BrowserRouter>
             <Header />
             <div className="App">
                 <Switch>
                     <Route exact path="/">
-                        <Mainpage />
+                        <Mainpage postMatchInfo={postMatchInfo} />
                     </Route>
                     <Route path="/signup">
                         <Signup />
@@ -25,8 +32,8 @@ function App() {
                     <Route path="/recordboard">
                         <RecordBoard />
                     </Route>
-                    <Route path="/matchinfo">
-                        <MatchInfo />
+                    <Route path="/faq">
+                        <FAQ />
                     </Route>
                     <Route path="/login">
                         <Login />
@@ -36,6 +43,9 @@ function App() {
                     </Route>
                     <Route path="/changeinfo">
                         <Changeinfo />
+                    </Route>
+                    <Route path="/matchinfo">
+                        <MatchInfo />
                     </Route>
                 </Switch>
             </div>

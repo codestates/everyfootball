@@ -1,43 +1,12 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-size: 13px
+#recordboard {
+  line-height: 25px;
+  transform: translateY(15%);
 }
-
-.totalRanking {
-  border:1px solid black;
-  width: 100%;
-  height: 20em;
-  padding-top: 2rem;
-}
-
-.totalTopBox {
-  margin-top: 2.3em;
-  border:1px solid black;
-  float: left;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.topBox {
-  margin-top: 3em;
-  margin-bottom: 3em;
-  margin-left: 7em;
-  width: 10em;
-  height: 10em;
-  border:1px solid black;
-  float: left;
-}
-
 .top{
   margin-top: 0.5em;
   margin-left: 1em;
   width: 8em;
   height: 4em;
-  border:1px solid black;
   line-height: 4em;
   text-align: center;
 }
@@ -47,20 +16,17 @@
   margin-left: 1em;
   width: 8em;
   height: 4em;
-  border:1px solid black;
   line-height: 4em;
   text-align: center;
 }
 
-.totalPlayer {
+.total-rank {
   margin-top: 5em;
-  border:1px solid black;
   padding-top: 2rem;
+  height: 100%;
 }
 
-* {
-  box-sizing: border-box;
-}
+
 
 .table {
   display: table;
@@ -88,7 +54,10 @@
 .merge-col {
   position: absolute;
   width: calc(100% - 2rem);
-  border: 1px solid gray;
   margin-left: -1px;
   padding: 0.5rem 1rem;
+}
+
+.total-rank div {
+  border: none;
 }

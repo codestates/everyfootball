@@ -32,17 +32,22 @@ function UserinfoRecord() {
     }, []);
 
     return (
-        <div className="text">
-            <h4>개인 기록</h4>
-
-            <table className="userinfo">
-                <tr>
-                    <td className="text">총 경기: {userinfo && userinfo.data.data.userInfo.totalMatch}</td>
-                    <td className="text">총 득점: {userinfo && userinfo.data.data.userInfo.totalGoal}</td>
-                    <td className="text">총 어시스트: {userinfo && userinfo.data.data.userInfo.totalAssist}</td>
-                    <td className="text">패널티: {userinfo && userinfo.data.data.userInfo.penalty}</td>
-                </tr>
-            </table>
+        <div id="userinfo-form">
+            <div className="userinfo-contents">
+                <div className="userinfo-category">내 기록</div>
+                <div className="userinfo-table">
+                    <div className="row-header">
+                        <div className="col">총 경기</div>
+                        <div className="col">총 득점</div>
+                        <div className="col">총 어시스트</div>
+                        <div className="col">패널티</div>
+                    </div>
+                    <div className="col"> {userinfo && userinfo.data.data.userInfo.totalMatch}</div>
+                    <div className="col"> {userinfo && userinfo.data.data.userInfo.totalGoal}</div>
+                    <div className="col"> {userinfo && userinfo.data.data.userInfo.totalAssist}</div>
+                    <div className="col">{userinfo && userinfo.data.data.userInfo.penalty}</div>
+                </div>
+            </div>
         </div>
     );
 }

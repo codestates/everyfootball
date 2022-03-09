@@ -2,9 +2,7 @@ const { users } = require('../../models');
 const jwt = require("jsonwebtoken");
 
 module.exports = (req, res) => {
-    console.log("회원탈퇴~~~~~~~~~~~~~~~~~~~~~")
     const logininfo = req.headers.authorization;
-    console.log(logininfo)
 
     if (logininfo){
         const token = logininfo.split(" ")[1]
