@@ -9,7 +9,7 @@ const Match = ({ matchData, postMatchInfo }) => {
                 <div class="match-info">
                     <h3>{matchData.location}</h3>
                     <span>{matchData.matchgender} </span>
-                    <span>{`${matchData.maxplayer / 2}vs${matchData.maxplayer / 2}`} </span>
+                    <span>{`${matchData.maxplayer / 2} vs ${matchData.maxplayer / 2}`} </span>
                 </div>
                 <Link
                     to="/matchinfo"
