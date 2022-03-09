@@ -1,7 +1,10 @@
 "use strict";
 
+const { sequelize, playerinmatches } = require("../models");
+
+
 module.exports = {
-  up: (queryInterface, Sequelize) => {
+  up: async (queryInterface, Sequelize) => {
     let location = [
       "서울특별시 강남구 논현로86길 34 B2",
       "서울특별시 강남구 논현로 748 지하1층",
@@ -11,12 +14,25 @@ module.exports = {
     ];
     let gender = ["남", "여", "혼성"];
     let datas = [];
-    for (let i = 0; i < 10; i++) {
-      let obj = {
+
+    
+
+    for (let i = 1; i < 11; i++) {
+
+      const nowplayer = await playerinmatches.findAndCountAll({
+        where: {
+          matchid: i,
+        },
+      })
+
+      console.log(nowplayer.count)
+
+      
+      let obj = await {
         matchid: i,
         time: `일시 2022.3.${i % 20} 시간 ${i % 23}:00`,
         maxplayer: 10,
-        nowplayer: i + 1,
+        nowplayer: nowplayer.count,
         location: `${location[i % 5]}`,
         matchgender: `${gender[i % 3]}`,
         score: `${i % 5} : ${i % 2}`,
