@@ -7,8 +7,6 @@ import "./StadiumImage.css";
 //axios.defaults.withCredentials = true;
 
 export default function StadiumImage({ groundinfo }) {
-    console.log(groundinfo);
-
     return (
         <div>
             <div className="stadium">

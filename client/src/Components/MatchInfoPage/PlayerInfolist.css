@@ -3,5 +3,22 @@
 }
 
 .player-form{
- width:200px;
+ width:300px;
+ height:150px;
+ border: 3px solid whitesmoke;
+ margin: 1px;
+ border-radius: 20px;
+ background-color: whitesmoke;
+}
+
+.pInfo  {
+  width:100%;
+  margin: 5px;
+  font-size:15px;
+}
+.pInfo > div {
+  font-size:15px;
+}
+.player-name{
+  font-size:18px;
 }

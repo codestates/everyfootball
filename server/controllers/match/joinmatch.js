@@ -32,7 +32,7 @@ module.exports = async (req, res) => {
           selectedMatch.dataValues.nowplayer ===
         0
       ) {
-        return res.status(201).send({ message: "마감된 경기입니다." });
+        return res.status(201).send({ message: "마감" });
       }
 
       const alreadyjoin = await playerinmatches.findOne({
@@ -74,7 +74,7 @@ module.exports = async (req, res) => {
           })
           .then(
             res.status(200).json({
-              message: `${payload.userid} has joined mathch ${payload.matchid}`,
+              message: `has joined match`,
               data: payload,
             })
           );
