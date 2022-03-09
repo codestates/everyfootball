@@ -1,6 +1,6 @@
 # 서비스 소개
 
-![image] (https://cdn.discordapp.com/attachments/947685049682247701/950572589833682944/everyfootball.png)
+![image](https://cdn.discordapp.com/attachments/947685049682247701/950572589833682944/everyfootball.png)
 
 > everyfootall은 매번 다수의 플레이어가 필요한 풋살을 플레이하기 위한 인원 모집 플랫폼입니다.
 > 
