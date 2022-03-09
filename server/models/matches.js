@@ -19,7 +19,7 @@ module.exports = (sequelize, DataTypes) => {
 
     nowplayer : {
         type : DataTypes.STRING,
-        allowNull: false,
+        allowNull: true,
     },
 
 
