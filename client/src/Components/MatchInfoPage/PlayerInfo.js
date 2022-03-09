@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import PlayerInfoBox from "./PlayerInfoBox";
 import Modal from "./Modal";
 import { useLocation } from "react-router-dom";
-
+import "./PlayerInfo.css";
 export default function PlayerInfo() {
     const { state } = useLocation();
     const [text, setText] = useState("신청하기");
@@ -19,28 +19,24 @@ export default function PlayerInfo() {
     const closeModal = () => {
         setModalOpen(false);
     };
-    // axios
-    //   .get(`https://jsonplaceholder.typicode.com/users/`, {
-    //       headers: { authorization: `Bearer ${accessToken}` },
-    //       "Content-Type": "application/json",
-    //   })
-    //   .then((res) => {
-    //       console.log(res);
-    //       console.log(res.data);
-    //       setUserinfo(res);
-    //       console.log("개인정보수정 성공");
-    //   })
-    //   .catch((err) => {
-    //       console.log("개인정보수정 에러", err);
-    //   });
 
     return (
-        <div>
+        <div id="match-player-info">
             <div className="totalPlayer">
                 <PlayerInfoBox />
             </div>
             {/* <button onClick={changeText}>{text}</button> */}
-            <button onClick={openModal}>신청하기</button>
+            <button
+                onClick={() => {
+                    if (!localStorage.getItem("accessToken")) {
+                        alert("로그인 후 이용 가능합니다.");
+                        return;
+                    }
+                    openModal();
+                }}
+            >
+                신청하기
+            </button>
             <Modal open={modalOpen} close={closeModal} header="선수 정보 입력">
                 {/* // Modal.js <main> {props.children} </main>에 내용이 입력된다.
          리액트 함수형 모달 */}
