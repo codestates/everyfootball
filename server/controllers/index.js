@@ -12,4 +12,5 @@ module.exports = {
   sendresult: require("./match/sendresult"),
   joinmatch: require("./match/joinmatch"),
   leavematch: require("./match/leavematch"),
+  myinfo: require("./user/myinfo"),
 };

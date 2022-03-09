@@ -19,7 +19,7 @@ export default function MatchInfo() {
             });
     }, []);
     return (
-        <div>
+        <div id="match-info-form">
             <StadiumImage groundinfo={matchInfoData.groundinfo} />
             <StadiumInfo groundinfo={matchInfoData.groundinfo} />
             <PlayerInfo usersinfo={matchInfoData.usersinfo} />

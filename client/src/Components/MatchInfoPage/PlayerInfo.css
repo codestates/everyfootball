@@ -1,4 +1,19 @@
 #match-player-info{
-  width: 1000px;
+  width: 1300px;
   margin: 0 auto;
+}
+
+.submit-button {
+  margin-top: 30px;
+  width:200px;
+  height:50px;
+  color:white;
+  background-color: #2e2e2e;
+  border-radius: 20px;
+  border: none;
+  padding-bottom: 5px;
+}
+
+.hide {
+  display: none;
 }

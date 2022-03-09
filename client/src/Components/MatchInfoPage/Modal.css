@@ -26,7 +26,7 @@
   }
   .modal > section > header {
     position: relative;
-    padding: 16px 64px 16px 16px;
+    padding: 16px 16px 16px 16px;
     background-color: #f1f1f1;
     font-weight: 700;
     font-size: 30px;
@@ -102,4 +102,17 @@
     margin-top: 7px;
     border:1px solid black;
     height: 56%;
+  }
+
+  #modal-section{
+    height:425px;
+  }
+  #modal-section > div {
+    transform: translateY(25%);
+  }
+  
+  #modal-section > div > li {
+      list-style-type: none;
+      font-size: 15px;
+      line-height: 25px;
   }
