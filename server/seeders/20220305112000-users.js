@@ -6,7 +6,7 @@ module.exports = {
       {
         userid: "Maxgoal",
         password: 1234,
-        fullname: "Maxgoal",
+        fullname: "득점왕",
         gender: "여",
         phonenum: "010-1111-1111",
         position: "FW",
@@ -32,7 +32,7 @@ module.exports = {
       {
         userid: "Maxassist",
         password: 1234,
-        fullname: "Maxassist",
+        fullname: "도움왕",
         gender: "여",
         phonenum: "010-1111-1111",
         position: "FW",
@@ -58,7 +58,7 @@ module.exports = {
       {
         userid: "Maxpoint",
         password: 1234,
-        fullname: "Maxpoint",
+        fullname: "포인트왕",
         gender: "여",
         phonenum: "010-1111-1111",
         position: "FW",
