@@ -22,7 +22,7 @@ export default function Board({ topusers }) {
                         return (
                             <Boardlist
                                 key={i}
-                                rank={i}
+                                rank={i + 1}
                                 name={el.fullname}
                                 goal={el.totalGoal}
                                 assist={el.totalAssist}

@@ -16,8 +16,15 @@ export default function PlayerInfo({ usersinfo }) {
     const [myData, setMyData] = useState({
         data: {
             userid: "",
+            fullname: "",
+            position: "",
+            penalty: "",
+            totalGoal: "",
+            totalAssist: "",
+            totalShooting: "",
         },
     });
+
     return (
         <div id="match-player-info">
             <div className="totalPlayer">
@@ -38,6 +45,7 @@ export default function PlayerInfo({ usersinfo }) {
                         })
                         .then((res) => {
                             setMyData(res.data);
+                            console.log(myData);
                         });
                     openModal();
                 }}
