@@ -43,7 +43,7 @@ export default function Modal({ open, close, header, myData }) {
                     <main>선수정보가 맞는지 확인해주세요</main>
                     <div>
                         <li>아이디 : {myData.data.userid}</li>
-                        <li>이름 : {myData.data.password}</li>
+                        <li>이름 : {myData.data.fullname}</li>
                         <li>선호포지션 : {myData.data.position}</li>
                         <li>패널티 : {myData.data.penalty} 회</li>
                         <li>총득점 : {myData.data.totalGoal} 골</li>
