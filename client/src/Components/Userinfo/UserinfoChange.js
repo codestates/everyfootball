@@ -10,7 +10,7 @@ const UserinfoChange = () => {
     });
 
     const handleInputValue = (key) => (e) => {
-        setIsedit({ ...isedit, [key]: e.target.value.toLowerCase() });
+        setIsedit({ ...isedit, [key]: e.target.value });
     };
 
     const onClickchange = () => {
@@ -28,7 +28,7 @@ const UserinfoChange = () => {
         console.log("click changeinfo");
         axios
             .post(
-                "http://localhost:4000/user/changeinfo",
+                `${process.env.REACT_APP_API_URL}/user/changeinfo`,
                 {
                     userid,
                     fullname,

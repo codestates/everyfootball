@@ -6,7 +6,7 @@ import Slide from "./Slide";
 const Mainpage = ({ postMatchInfo }) => {
     const [matchDatas, setMatchDatas] = useState([]); // 매치목록 상태변수
     useEffect(() => {
-        fetch("http://localhost:4000/match/showmatchlist")
+        fetch(`${process.env.REACT_APP_API_URL}/match/showmatchlist`)
             .then((res) => res.json())
             .then((res) => {
                 setMatchDatas(res.matches);

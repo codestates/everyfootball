@@ -5,7 +5,7 @@ const Footer = () => {
     return (
         <footer>
             <div id="menu">
-                <div class="menu-left">
+                <div className="menu-left">
                     <div>
                         <span>에브리풋볼 소개</span>
                     </div>
@@ -22,15 +22,15 @@ const Footer = () => {
                         <span>자주 묻는 질문</span>
                     </div>
                 </div>
-                <div class="menu-right">
+                <div className="menu-right">
                     <img src="https://pzfutball.com/public_images/sidebar/youtube.svg" />
                     <img src="https://pzfutball.com/public_images/sidebar/insta.svg" />
                     <img src="https://pzfutball.com/public_images/sidebar/openkakao.svg" />
                 </div>
-                <div class="menu-right"></div>
+                <div className="menu-right"></div>
             </div>
             <div id="company">
-                <div class="company-left">
+                <div className="company-left">
                     <div>
                         <a>개인정보처리방침</a>
                         <a>이용약관</a>
@@ -44,7 +44,7 @@ const Footer = () => {
                         사업자번호 12-12345-1234 | Copyright @ 2017 EveryFootball Corporation, All rights reserved.
                     </div>
                 </div>
-                <div class="company-right">
+                <div className="company-right">
                     <div></div>
                     <div>
                         <img src={logo} />

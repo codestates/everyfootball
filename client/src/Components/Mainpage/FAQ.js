@@ -47,12 +47,12 @@ const FAQ = () => {
                     </p>
                 </div>
             </div>
-            <div class="faq-content">
-                <button class="question" id="que-3" onClick={(event) => openCloseAnswer(event)}>
+            <div className="faq-content">
+                <button className="question" id="que-3" onClick={(event) => openCloseAnswer(event)}>
                     <span id="que-3-toggle"></span>
                     <span>비나 눈이 와도 매치가 진행되나요?</span>
                 </button>
-                <div class="answer hide" id="ans-3">
+                <div className="answer hide" id="ans-3">
                     <p>
                         에브리풋볼 매치 규정상 '재난 문자' 기준에 따라 경기가 취소됩니다.
                         <br />
@@ -86,12 +86,12 @@ const FAQ = () => {
                     </p>
                 </div>
             </div>
-            <div class="faq-content">
-                <button class="question" id="que-4" onClick={(event) => openCloseAnswer(event)}>
+            <div className="faq-content">
+                <button className="question" id="que-4" onClick={(event) => openCloseAnswer(event)}>
                     <span id="que-4-toggle"></span>
                     <span>날짜를 잘못 신청해서 취소하고 싶어요</span>
                 </button>
-                <div class="answer hide" id="ans-4">
+                <div className="answer hide" id="ans-4">
                     <p>
                         해당 경기 참가로 인해 다른 인원이 참가할 수 있는 기회가 사라지게 되므로,
                         <br />
@@ -99,12 +99,12 @@ const FAQ = () => {
                     </p>
                 </div>
             </div>
-            <div class="faq-content">
-                <button class="question" id="que-5" onClick={(event) => openCloseAnswer(event)}>
+            <div className="faq-content">
+                <button className="question" id="que-5" onClick={(event) => openCloseAnswer(event)}>
                     <span id="que-5-toggle"></span>
                     <span>인원이 채워지지 않으면 경기가 취소 되나요?</span>
                 </button>
-                <div class="answer hide" id="ans-5">
+                <div className="answer hide" id="ans-5">
                     <p>
                         매치 인원 미달로 인한 경기 진행 불가 시에는
                         <br />
@@ -129,13 +129,13 @@ const FAQ = () => {
                     </p>
                 </div>
             </div>
-            <div class="faq-content">
-                <div class="faq-category">경기 진행</div>
-                <button class="question" id="que-6" onClick={(event) => openCloseAnswer(event)}>
+            <div className="faq-content">
+                <div className="faq-category">경기 진행</div>
+                <button className="question" id="que-6" onClick={(event) => openCloseAnswer(event)}>
                     <span id="que-6-toggle"></span>
                     <span>5대5 매치는 어떻게 진행되나요?</span>
                 </button>
-                <div class="answer hide" id="ans-6">
+                <div className="answer hide" id="ans-6">
                     <p>에브리풋볼 5대5 매치는 2파전과 3파전 2가지로 구성되어있습니다.</p>
                     <p>
                         [2파전 진행]
@@ -162,12 +162,12 @@ const FAQ = () => {
                     </p>
                 </div>
             </div>
-            <div class="faq-content">
-                <button class="question" id="que-7" onClick={(event) => openCloseAnswer(event)}>
+            <div className="faq-content">
+                <button className="question" id="que-7" onClick={(event) => openCloseAnswer(event)}>
                     <span id="que-7-toggle"></span>
                     <span>6대6 매치는 어떻게 진행되나요?</span>
                 </button>
-                <div class="answer hide" id="ans-7">
+                <div className="answer hide" id="ans-7">
                     <p>
                         에브리풋볼 6대6 매치는 2파전과 3파전 2가지로 구성되어 있습니다.
                         <br />
@@ -216,12 +216,12 @@ const FAQ = () => {
                     </p>
                 </div>
             </div>
-            <div class="faq-content">
-                <button class="question" id="que-8" onClick={(event) => openCloseAnswer(event)}>
+            <div className="faq-content">
+                <button className="question" id="que-8" onClick={(event) => openCloseAnswer(event)}>
                     <span id="que-8-toggle"></span>
                     <span>경기 진행이 어떻게 되나요?</span>
                 </button>
-                <div class="answer hide" id="ans-8">
+                <div className="answer hide" id="ans-8">
                     <p>에브리풋볼의 매치는 5인 경기 2파전/3파전, 6인 경기 2파전/3파전 총 4가지로 구성되어 있습니다.</p>
                     <p>
                         1. 경기장 집결
@@ -236,13 +236,13 @@ const FAQ = () => {
                     </p>
                 </div>
             </div>
-            <div class="faq-content">
-                <div class="faq-category">구장 및 구장서비스</div>
-                <button class="question" id="que-9" onClick={(event) => openCloseAnswer(event)}>
+            <div className="faq-content">
+                <div className="faq-category">구장 및 구장서비스</div>
+                <button className="question" id="que-9" onClick={(event) => openCloseAnswer(event)}>
                     <span id="que-9-toggle"></span>
                     <span>샤워 시설이 있나요?</span>
                 </button>
-                <div class="answer hide" id="ans-9">
+                <div className="answer hide" id="ans-9">
                     <p>
                         샤워 시설은 구장 시설에 포함되어 있어, 구장별로 상이합니다.
                         <br />
@@ -250,30 +250,30 @@ const FAQ = () => {
                     </p>
                 </div>
             </div>
-            <div class="faq-content">
-                <button class="question" id="que-10" onClick={(event) => openCloseAnswer(event)}>
+            <div className="faq-content">
+                <button className="question" id="que-10" onClick={(event) => openCloseAnswer(event)}>
                     <span id="que-10-toggle"></span>
                     <span>유니폼이나 운동복을 빌려주나요?</span>
                 </button>
-                <div class="answer hide" id="ans-10">
+                <div className="answer hide" id="ans-10">
                     <p>유니폼/운동복 대여 여부는 풋살장에 따라 다릅니다.</p>
                 </div>
             </div>
-            <div class="faq-content">
-                <button class="question" id="que-11" onClick={(event) => openCloseAnswer(event)}>
+            <div className="faq-content">
+                <button className="question" id="que-11" onClick={(event) => openCloseAnswer(event)}>
                     <span id="que-11-toggle"></span>
                     <span>주차시설이 있나요?</span>
                 </button>
-                <div class="answer hide" id="ans-11">
+                <div className="answer hide" id="ans-11">
                     <p>경기장(구장)에 따라 주차가 가능합니다.</p>
                 </div>
             </div>
-            <div class="faq-content">
-                <button class="question" id="que-12" onClick={(event) => openCloseAnswer(event)}>
+            <div className="faq-content">
+                <button className="question" id="que-12" onClick={(event) => openCloseAnswer(event)}>
                     <span id="que-12-toggle"></span>
                     <span>천연잔디 구장인가요?</span>
                 </button>
-                <div class="answer hide" id="ans-12">
+                <div className="answer hide" id="ans-12">
                     <p>
                         경기장(구장)에 따라 잔디의 종류와 길이에 상이한 차이가 있으나, 대부분의 경우 '인조 잔디'
                         상태입니다.
@@ -283,13 +283,13 @@ const FAQ = () => {
                     </p>
                 </div>
             </div>
-            <div class="faq-content">
-                <div class="faq-category">매치 신청</div>
-                <button class="question" id="que-13" onClick={(event) => openCloseAnswer(event)}>
+            <div className="faq-content">
+                <div className="faq-category">매치 신청</div>
+                <button className="question" id="que-13" onClick={(event) => openCloseAnswer(event)}>
                     <span id="que-13-toggle"></span>
                     <span>혼성매치가 뭐에요?</span>
                 </button>
-                <div class="answer hide" id="ans-13">
+                <div className="answer hide" id="ans-13">
                     <p>
                         혼성 매치는 문자 그대로 남녀가 모두 참여 가능한 매치입니다.
                         <br />
@@ -305,12 +305,12 @@ const FAQ = () => {
                     </p>
                 </div>
             </div>
-            <div class="faq-content">
-                <button class="question" id="que-14" onClick={(event) => openCloseAnswer(event)}>
+            <div className="faq-content">
+                <button className="question" id="que-14" onClick={(event) => openCloseAnswer(event)}>
                     <span id="que-14-toggle"></span>
                     <span>친구와 같은 팀으로 매치를 진행하고 싶어요</span>
                 </button>
-                <div class="answer hide" id="ans-14">
+                <div className="answer hide" id="ans-14">
                     <p>
                         경기 신청 후 구장 집결 시 지인들과 오신 분들은 같은 팀으로 배정이 가능합니다.
                         <br />
@@ -327,22 +327,22 @@ const FAQ = () => {
                     </p>
                 </div>
             </div>
-            <div class="faq-content">
-                <button class="question" id="que-15" onClick={(event) => openCloseAnswer(event)}>
+            <div className="faq-content">
+                <button className="question" id="que-15" onClick={(event) => openCloseAnswer(event)}>
                     <span id="que-15-toggle"></span>
                     <span>한 자리 신청 후 여러 명이 번갈아가며 뛸 수 있나요?</span>
                 </button>
-                <div class="answer hide" id="ans-15">
+                <div className="answer hide" id="ans-15">
                     <p>에브리풋볼 매치의 원칙상 '한 자리 신청시 한 명만 참가'하도록 규정되어 있습니다.</p>
                     <p>때문에, 코로나 거리두기 인원제한 규정상 절대 불가합니다.</p>
                 </div>
             </div>
-            <div class="faq-content">
-                <button class="question" id="que-16" onClick={(event) => openCloseAnswer(event)}>
+            <div className="faq-content">
+                <button className="question" id="que-16" onClick={(event) => openCloseAnswer(event)}>
                     <span id="que-16-toggle"></span>
                     <span>고정 포지션으로 신청이 가능할까요?</span>
                 </button>
-                <div class="answer hide" id="ans-16">
+                <div className="answer hide" id="ans-16">
                     <p>
                         에브리풋볼의 매치 진행 방식은 경기 시작 전 등번호가 부여된 조끼를 배정받아 로테이션 시스템으로
                         진행됩니다.
@@ -356,12 +356,12 @@ const FAQ = () => {
                     </p>
                 </div>
             </div>
-            <div class="faq-content">
-                <button class="question" id="que-17" onClick={(event) => openCloseAnswer(event)}>
+            <div className="faq-content">
+                <button className="question" id="que-17" onClick={(event) => openCloseAnswer(event)}>
                     <span id="que-17-toggle"></span>
                     <span>나이 제한이 있을까요?</span>
                 </button>
-                <div class="answer hide" id="ans-17">
+                <div className="answer hide" id="ans-17">
                     <p>
                         에브리풋볼은 일반 매치 나이의 상한선을 별도로 제한하지 않지만, 신체 접촉이 많은 대면 스포츠와
                         <br />

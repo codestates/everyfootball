@@ -116,7 +116,7 @@ export default function RecordBoard() {
         ],
     });
     useEffect(() => {
-        fetch("http://localhost:4000/match/record")
+        fetch(`${process.env.REACT_APP_API_URL}/match/record`)
             .then((res) => res.json())
             .then((res) => {
                 setRecordData(res.data);

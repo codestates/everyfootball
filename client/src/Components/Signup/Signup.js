@@ -36,7 +36,7 @@ function Signup() {
         let idNewed = document.querySelector(".id-new");
         if (isMoreThan4Length() && onlyNumberAndEnglish()) {
             axios
-                .post(`http://localhost:4000/user/existedid`, {
+                .post(`${process.env.REACT_APP_API_URL}/user/existedid`, {
                     userid: userId,
                 })
                 .then((response) => {
@@ -119,7 +119,7 @@ function Signup() {
         idExistedCheck();
         if (isPasswordEquel() && isPasswordValidate() && nameCheck() && phoneNumberCheck() && idExisted) {
             axios
-                .post("http://localhost:4000/user/signup", {
+                .post(`${process.env.REACT_APP_API_URL}/user/signup`, {
                     userid: userId,
                     password: password,
                     fullname: name,
@@ -144,41 +144,41 @@ function Signup() {
                 <div>
                     <div>아이디</div>
                     <div id="id">
-                        <div class="inputbox1">
+                        <div className="inputbox1">
                             <input type="text" onChange={(e) => setUserId(e.target.value)} />
                         </div>
                         <div id="id-check" onClick={idExistedCheck}>
                             중복확인
                         </div>
                     </div>
-                    <div class="id-length-fail hide">아이디는 네 글 자 이상이여야 합니다.</div>
-                    <div class="id-validate-fail hide">아이디는 영어 또는 숫자만 가능합니다.</div>
-                    <div class="id-confirm">중복검사를 진행해 주세요</div>
-                    <div class="id-existed hide">중복된 아이디 입니다.</div>
-                    <div class="id-new hide">중복되지 않은 아이디 입니다.</div>
+                    <div className="id-length-fail hide">아이디는 네 글 자 이상이여야 합니다.</div>
+                    <div className="id-validate-fail hide">아이디는 영어 또는 숫자만 가능합니다.</div>
+                    <div className="id-confirm">중복검사를 진행해 주세요</div>
+                    <div className="id-existed hide">중복된 아이디 입니다.</div>
+                    <div className="id-new hide">중복되지 않은 아이디 입니다.</div>
                 </div>
                 <div>
                     <div>비밀번호</div>
-                    <div class="inputbox">
+                    <div className="inputbox">
                         <input type="password" onChange={(e) => setPassword(e.target.value)} />
                     </div>
                 </div>
                 <div>
                     <div>비밀번호 확인</div>
-                    <div class="inputbox">
+                    <div className="inputbox">
                         <input type="password" onChange={(e) => setPasswordRetype(e.target.value)} />
                     </div>
-                    <div class="password-mismatch hide">비밀번호가 일치하지 않습니다.</div>
-                    <div class="password-validate-fail hide">
+                    <div className="password-mismatch hide">비밀번호가 일치하지 않습니다.</div>
+                    <div className="password-validate-fail hide">
                         비밀번호는 최소 8자 이상, 알파벳과 숫자 및 특수문자를 포함해야 합니다.
                     </div>
                 </div>
                 <div>
                     <div>이름</div>
-                    <div class="inputbox">
+                    <div className="inputbox">
                         <input type="text" onChange={(e) => setName(e.target.value)} />
                     </div>
-                    <div class="name-check hide">이름은 필수입력입니다.</div>
+                    <div className="name-check hide">이름은 필수입력입니다.</div>
                 </div>
                 <div>
                     <div>성별</div>
@@ -228,7 +228,7 @@ function Signup() {
                 </div>
                 <div>
                     <div>전화번호</div>
-                    <div class="inputbox">
+                    <div className="inputbox">
                         <input
                             type="tel"
                             name="tlno"
@@ -240,17 +240,17 @@ function Signup() {
                             onChange={(e) => setPhoneNumber(e.target.value)}
                         />
                     </div>
-                    <div class="phone-check hide">올바른 전화번호를 입력해주세요.</div>
+                    <div className="phone-check hide">올바른 전화번호를 입력해주세요.</div>
                 </div>
                 <div>
                     <div>선호경기시간</div>
-                    <div class="inputbox">
+                    <div className="inputbox">
                         <input type="date" onChange={(e) => setMatchTime(e.target.value)} />
                     </div>
                 </div>
                 <div>
                     <div>선호경기위치</div>
-                    <div class="inputbox">
+                    <div className="inputbox">
                         <input type="input" onChange={(e) => setMatchLocation(e.target.value)} />
                     </div>
                 </div>

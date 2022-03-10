@@ -4,11 +4,12 @@ import { Link } from "react-router-dom";
 import "./Header.css";
 import logo from "./logo.png";
 import axios from "axios";
+
 const Header = () => {
     // axios() 로그아웃 기능 구현
     const isLogOut = () => {
         axios
-            .get("http://localhost:4000/user/logout", { withCredentials: true })
+            .get(`${process.env.REACT_APP_API_URL}/user/logout`, { withCredentials: true })
             .then((res) => {
                 localStorage.removeItem("accessToken");
                 localStorage.removeItem("fullname");
@@ -46,7 +47,7 @@ const Header = () => {
                     </ul>
                 </nav>
                 {localStorage.getItem("accessToken") ? (
-                    <ul class="spot">
+                    <ul className="spot">
                         <li>
                             <a>{localStorage.getItem("fullname")} 님</a>
                         </li>
@@ -62,7 +63,7 @@ const Header = () => {
                         </li>
                     </ul>
                 ) : (
-                    <ul class="spot">
+                    <ul className="spot">
                         <li>
                             <Link to="/login" style={{ textDecoration: "none" }}>
                                 로그인

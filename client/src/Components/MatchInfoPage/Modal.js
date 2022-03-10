@@ -6,7 +6,7 @@ export default function Modal({ open, close, header, myData }) {
     // 열기, 닫기, 모달 헤더 텍스트를 부모로부터 받아옴
     const requestJoin = () => {
         axios
-            .get(`http://localhost:4000/match/joinmatch/${localStorage.getItem("matchid")}`, {
+            .get(`${process.env.REACT_APP_API_URL}/match/joinmatch/${localStorage.getItem("matchid")}`, {
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem("accessToken")}`,
                 },
