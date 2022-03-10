@@ -11,7 +11,7 @@ const db = require("./models");
 app.use(express.json());
 app.use(
   cors({
-    origin: ["http://localhost:3000"],
+    origin: ["http://everyfootball-bucket-deploy1.s3-website.ap-northeast-2.amazonaws.com"],
     credentials: true,
     methods: ["GET", "POST", "OPTIONS"],
   })
