@@ -16,13 +16,13 @@ const FAQ = () => {
     return (
         <div id="faq-form">
             <div id="faq-title">자주 묻는 질문(FAQ)</div>
-            <div class="faq-content">
-                <div class="faq-category">결제 및 환불</div>
-                <button class="question" id="que-1" onClick={(event) => openCloseAnswer(event)}>
+            <div className="faq-content">
+                <div className="faq-category">결제 및 환불</div>
+                <button className="question" id="que-1" onClick={(event) => openCloseAnswer(event)}>
                     <span id="que-1-toggle"></span>
                     <span>매치신청 취소를 하고 싶어요</span>
                 </button>
-                <div class="answer hide" id="ans-1">
+                <div className="answer hide" id="ans-1">
                     <p>
                         신청취소는 '마이페이지'를 통해 직접 취소 신청을 하셔야 합니다.
                         <br />
