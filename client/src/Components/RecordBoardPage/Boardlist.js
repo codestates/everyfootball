@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 export default function Boardlist({ rank, name, goal, assist, point, totalmatch }) {
     return (
-        <div class="row">
+        <div className="row">
             <div className="col">{rank}</div>
             <div className="col">{name}</div>
             <div className="col">{goal}</div>
