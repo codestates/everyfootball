@@ -3,21 +3,21 @@ dotenv.config();
 
 module.exports = {
   development: {
-    username: "root",
+    username: "euilimchoi",
     password: process.env.DATABASE_PASSWORD,
     database: "everyfootball",
     host: process.env.DATABASE_HOST,
     dialect: "mysql",
   },
   test: {
-    username: "root",
+    username: "euilimchoi",
     password: process.env.DATABASE_PASSWORD,
     database: "everyfootball",
     host: process.env.DATABASE_HOST,
     dialect: "mysql",
   },
   production: {
-    username: "root",
+    username: "euilimchoi",
     password: process.env.DATABASE_PASSWORD,
     database: "everyfootball",
     host: process.env.DATABASE_HOST,
