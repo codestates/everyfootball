@@ -3,10 +3,10 @@ import "./Match.css";
 import { Link } from "react-router-dom";
 const Match = ({ matchData, postMatchInfo }) => {
     return (
-        <div class="match-li">
-            <a class="match-link">
-                <div class="match-time">{matchData.time}</div>
-                <div class="match-info">
+        <div className="match-li">
+            <a className="match-link">
+                <div className="match-time">{matchData.time}</div>
+                <div className="match-info">
                     <h3>{matchData.location}</h3>
                     <span>{matchData.matchgender} </span>
                     <span>{`${matchData.maxplayer / 2} vs ${matchData.maxplayer / 2}`} </span>
@@ -18,7 +18,7 @@ const Match = ({ matchData, postMatchInfo }) => {
                     }}
                 >
                     <div
-                        class={
+                        className={
                             Number(matchData.maxplayer) - Number(matchData.nowplayer) === 0
                                 ? "match-status closed"
                                 : "match-status"

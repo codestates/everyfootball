@@ -15,7 +15,7 @@ export default function Board({ topusers }) {
                         <div className="col">선수</div>
                         <div className="col">득점</div>
                         <div className="col">도움</div>
-                        <div className="col">공격 포인트</div>
+                        <div className="col">포인트</div>
                         <div className="col">경기 수</div>
                     </div>
                     {dummyData.map((el, i) => {

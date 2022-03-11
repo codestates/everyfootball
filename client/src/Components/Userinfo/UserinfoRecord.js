@@ -11,7 +11,7 @@ function UserinfoRecord() {
             return;
         } else {
             axios
-                .get("http://localhost:4000/user/userinfo", {
+                .get(`${process.env.REACT_APP_API_URL}/user/userinfo`, {
                     // headers:{localStorage.getItem("accessToken")}
                     headers: { authorization: `Bearer ${accessToken}` },
                     "Content-Type": "application/json",

@@ -11,7 +11,7 @@ export default function MatchInfo() {
 
     useEffect(() => {
         setIsLoading(true);
-        fetch(`http://localhost:4000/match/data/matchid?matchid=${localStorage.getItem("matchid")}`)
+        fetch(`${process.env.REACT_APP_API_URL}/match/data/matchid?matchid=${localStorage.getItem("matchid")}`)
             .then((res) => res.json())
             .then((res) => {
                 setMatchInfoData(res.data);

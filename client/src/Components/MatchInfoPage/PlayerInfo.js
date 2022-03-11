@@ -4,6 +4,7 @@ import Modal from "./Modal";
 import { useLocation } from "react-router-dom";
 import "./PlayerInfo.css";
 import axios from "axios";
+
 export default function PlayerInfo({ usersinfo }) {
     const [modalOpen, setModalOpen] = useState(false);
 
@@ -38,7 +39,7 @@ export default function PlayerInfo({ usersinfo }) {
                         return;
                     }
                     axios
-                        .get("http://localhost:4000/user/myinfo", {
+                        .get(`${process.env.REACT_APP_API_URL}/user/myinfo`, {
                             headers: {
                                 Authorization: `Bearer ${localStorage.getItem("accessToken")}`,
                             },
@@ -49,12 +50,12 @@ export default function PlayerInfo({ usersinfo }) {
                         });
                     openModal();
                 }}
-                class="submit-button"
+                className="submit-button"
             >
                 신청하기
             </button>
             <button
-                class="submit-button"
+                className="submit-button"
                 onClick={() => {
                     if (!localStorage.getItem("accessToken")) {
                         alert("로그인 후 이용 가능합니다.");
@@ -62,7 +63,7 @@ export default function PlayerInfo({ usersinfo }) {
                         return;
                     }
                     axios
-                        .get(`http://localhost:4000/match/leavematch/${localStorage.getItem("matchid")}`, {
+                        .get(`${process.env.REACT_APP_API_URL}/match/leavematch/${localStorage.getItem("matchid")}`, {
                             headers: {
                                 Authorization: `Bearer ${localStorage.getItem("accessToken")}`,
                             },
