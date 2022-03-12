@@ -11,7 +11,7 @@ const db = require("./models");
 app.use(express.json());
 app.use(
   cors({
-    origin: ["http://everyfootball-bucket-deploy1.s3-website.ap-northeast-2.amazonaws.com"],
+    origin: ["http://localhost:3000"],
     credentials: true,
     methods: ["GET", "POST", "OPTIONS"],
   })
@@ -22,7 +22,6 @@ app.post("/user/login", usercontrollers.login);
 app.post("/user/signup", usercontrollers.signup);
 app.get("/user/signout", usercontrollers.signout);
 app.get("/user/userinfo", usercontrollers.userinfo);
-app.get("/user/existedid", usercontrollers.existedid);
 app.post("/user/changeinfo", usercontrollers.changeinfo);
 app.get("/match/data/:matchid", matchcontrollers.data);
 app.get("/match/showmatchlist", matchcontrollers.showmatchlist);
@@ -32,8 +31,6 @@ app.get("/match/joinmatch/:matchid", matchcontrollers.joinmatch);
 app.get("/match/leavematch/:matchid", matchcontrollers.leavematch);
 app.post("/user/existedid", usercontrollers.existedid);
 app.get("/user/logout", usercontrollers.logout);
-app.post("/user/existedid", usercontrollers.existedid);
-
 app.get("/user/myinfo", usercontrollers.myinfo);
 
 db.sequelize.sync().then((req) => {
