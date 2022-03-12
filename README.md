@@ -13,7 +13,10 @@
 - 경기 종료후 경기 개인 기록을 누적해 다른 유저들과 경쟁할 수 있습니다! 매경기 최선을 다해주세요!
 
 # Tech Stack
-![image](https://user-images.githubusercontent.com/91925895/157011001-13c0af7c-2dd5-4aee-b7bc-b929f6bdb1ca.png)
+
+![Screenshot from 2022-03-11 22-50-44](https://user-images.githubusercontent.com/13508988/157881162-bc53290a-cf09-4c29-b869-7f20ae969686.png)
+
+
 
 # Contributing
 
