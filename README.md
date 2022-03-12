@@ -21,6 +21,5 @@
 | ---- | ------ | --------- | ----------------------------------------- |
 | 팀장 | 최의림 | BACK-END | [euilimchoi](https://github.com/EuilimChoi)   |
 | 팀원 | 강호중 | FRONT-END  | [rkdghwnd](https://github.com/rkdghwnd)       |
-| 팀원 | 진하영 | FRONT-END | [Jin-composition](https://github.com/Jin-composition) |
 | 팀원 | 정윤혁 | FRONT-END | [hyukzz](https://github.com/hyukzz)    |
   
