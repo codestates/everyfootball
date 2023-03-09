@@ -12,15 +12,11 @@ function UserinfoRecord() {
         } else {
             axios
                 .get(`${process.env.REACT_APP_API_URL}/user/userinfo`, {
-                    // headers:{localStorage.getItem("accessToken")}
                     headers: { authorization: `Bearer ${accessToken}` },
                     "Content-Type": "application/json",
                 })
                 .then((res) => {
-                    console.log(res);
-                    console.log(res.data.data.userInfo.totalMatch);
                     setUserinfo(res);
-                    console.log("개인기록 성공");
                 })
                 .catch((err) => {
                     console.log("개인기록 에러", err);
