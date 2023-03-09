@@ -20,10 +20,8 @@ function UserinfoEdit() {
                     "Content-Type": "application/json",
                 })
                 .then((res) => {
-                    console.log(res);
-                    console.log(res.data);
                     setUserinfo(res);
-                    console.log("개인정보수정 성공");
+                    alert("개인정보수정 성공");
                 })
                 .catch((err) => {
                     console.log("개인정보수정 에러", err);
@@ -47,15 +45,11 @@ function UserinfoEdit() {
                         <div className="col">아이디</div>
                         <div className="col">포지션</div>
                         <div className="col">성별</div>
-                        {/* <div className="col">선호 구장 위치</div>
-                    <div className="col">선호 경기 시간</div> */}
                     </div>
                     <div className="col">{userinfo && userinfo.data.data.userInfo.fullname}</div>
                     <div className="col">{userinfo && userinfo.data.data.userInfo.userid}</div>
                     <div className="col">{userinfo && userinfo.data.data.userInfo.position}</div>
                     <div className="col">{userinfo && userinfo.data.data.userInfo.gender}</div>
-                    {/* <div className="col">{userinfo && userinfo.data.datapreferLocation}</div>
-                <div className="col">{userinfo && userinfo.data.preferTime}</div> */}
                 </div>
             </div>
         </div>
