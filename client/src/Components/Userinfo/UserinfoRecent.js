@@ -7,7 +7,6 @@ import "./UserinfoFormList.css";
 function UserinfoRecent() {
     const accessToken = localStorage.getItem("accessToken");
     const [userinfo, setUserinfo] = useState([]);
-    console.log("token", accessToken);
 
     const userinfoRecentHandler = () => {
         if (!accessToken) {
@@ -19,11 +18,7 @@ function UserinfoRecent() {
                     "Content-Type": "application/json",
                 })
                 .then((res) => {
-                    // console.log(res);
-                    console.log(res.data.last10match);
-                    // console.log(res.data.last10match[0].time);
                     setUserinfo(res.data.last10match);
-                    console.log("최근경기기록 성공");
                 })
                 .catch((err) => {
                     console.log("최근경기기록 에러", err);
