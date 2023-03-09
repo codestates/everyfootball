@@ -16,16 +16,15 @@ const UserinfoChange = () => {
     const onClickchange = () => {
         const { userid, fullname, position } = isedit;
         if (userid === "") {
-            console.log("아이디를 입력하세요");
+            alert("아이디를 입력하세요");
             return;
         } else if (fullname === "") {
-            console.log("이름을 입력하세요");
+            alert("이름을 입력하세요");
             return;
         } else if (position === "") {
-            console.log("포지션을 입력하세요");
+            alert("포지션을 입력하세요");
             return;
         }
-        console.log("click changeinfo");
         axios
             .post(
                 `${process.env.REACT_APP_API_URL}/user/changeinfo`,
@@ -37,9 +36,6 @@ const UserinfoChange = () => {
                 { "Content-Type": "application/json", withCredentials: true },
             )
             .then((res) => {
-                console.log(res);
-                console.log("성공");
-                console.log(res.data);
                 if (res.status === 200) {
                     alert("수정 완료했습니다.");
                     return window.location.replace("/userinfo");
