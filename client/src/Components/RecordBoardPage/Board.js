@@ -3,8 +3,9 @@ import Boardlist from "./Boardlist";
 import "./Board.css";
 
 export default function Board({ topusers }) {
-    const dummyData = topusers.slice();
-    dummyData.sort((a, b) => b.totalPoint - a.totalPoint);
+    const playerData = [...topusers];
+    playerData.sort((a, b) => b.totalPoint - a.totalPoint);
+
     return (
         <div>
             <div className="total-rank">
