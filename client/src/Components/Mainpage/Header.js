@@ -6,7 +6,6 @@ import logo from "./logo.png";
 import axios from "axios";
 
 const Header = () => {
-    // axios() 로그아웃 기능 구현
     const isLogOut = () => {
         axios
             .get(`${process.env.REACT_APP_API_URL}/user/logout`, { withCredentials: true })
