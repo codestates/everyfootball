@@ -19,7 +19,7 @@ export default function Board({ topusers }) {
                         <div className="col">포인트</div>
                         <div className="col">경기 수</div>
                     </div>
-                    {dummyData.map((el, i) => {
+                    {playerData.map((el, i) => {
                         return (
                             <Boardlist
                                 key={i}
