@@ -8,7 +8,7 @@ const userDelete = () => {
         if (window.confirm("정말 회원탈퇴하시겠습니까?")) {
             deleteHandler();
         } else {
-            console.log("회원탈퇴 취소하기");
+            alert("회원탈퇴 취소하기");
         }
     };
     const deleteHandler = () => {
@@ -21,15 +21,13 @@ const userDelete = () => {
                     "Content-Type": "application/json",
                 })
                 .then((res) => {
-                    console.log("탈퇴");
                     localStorage.removeItem("accessToken");
                     localStorage.removeItem("fullname");
                     alert("그동안 이용해 주셔서 감사합니다.");
                     window.location.replace("/");
                 })
-                .catch((err) => {
-                    console.log("회원탈퇴 에러", err);
-                    // alert("잘못된 요청입니다");
+                .catch((err) => { 
+                    alert("잘못된 요청입니다");
                 });
         }
     };
