@@ -43,7 +43,11 @@ Everyfootball에서는...
 
 ![Screenshot from 2022-03-11 22-50-44](https://user-images.githubusercontent.com/13508988/157881162-bc53290a-cf09-4c29-b869-7f20ae969686.png)
 
-
+# Run
+```
+npm install
+npm run start
+```
 
 # Contributing
 
